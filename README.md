@@ -1,4 +1,4 @@
-# 📊 PYTHON do ZERO -> AI Programação PYTHON Do Zero a Inteligência Artificial 2026
+# 📊 PYTHON do ZERO -> AI Programação PYTHON do Zero a Inteligência Artificial 2026
 
 
 ![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=tinalmeid_PYTHON-analise-de-dados-financeiros&metric=alert_status)
@@ -123,7 +123,6 @@ Para manter a qualidade e a rastreabilidade do projeto, seguimos estritamente:
         | src\setup_inicial\setup_inicial.py     22      0    100%                  ✅
         |-------------------------------------------------------------------------------
         | TOTAL                                  22      0    100%                  ✅
-
         🔢 Stmts (Statements) : Linhas executáveis
         ❌ Miss (Missed) : Linhas que o teste não conseguiu cobrir
         🎯 Cover (Coverage) : Porcentagem de cobertura

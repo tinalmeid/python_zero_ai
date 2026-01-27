@@ -15,8 +15,8 @@ git pull origin main # Pegue as novidades (seu código mergeado)
 ```
 
 ### 2. Crie a branch da sua tarefa (Ex: Task CDD-586)
-git checkout -b ID-JIRA-tipo/nome-da-tarefa
 ```Bash
+git checkout -b ID-JIRA-tipo/nome-da-tarefa
 git checkout -b CDD-5-chore/setup-ambiente
 ```
 

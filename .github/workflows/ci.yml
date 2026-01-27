@@ -58,8 +58,16 @@ jobs:
           echo "🔎 Verificando correção no coverage.xml:"
           cat coverage.xml | head -n 5
 
+      # 6. Ajustar caminhos absolutos no coverage.xml para garantir compatibilidade com SonarCloud
+      - name: 🚑 Corrigir Caminhos Absolutos no XML
+        run: |
+          sed -i 's|filename=".*src/|filename="src/|g' coverage.xml
 
-      # 6. Enviar análise para o SonarCloud (ação oficial)
+          # Debug: Verificar se os caminhos foram ajustados corretamente
+          echo "🔎 Verificando correção no coverage.xml após ajuste de caminhos absolutos:"
+          cat coverage.xml | head -n 10
+
+      # 7. Enviar análise para o SonarCloud (ação oficial)
       - name: 🚀 Analisar com SonarCloud
         uses: SonarSource/sonarcloud-github-action@v2
         env:

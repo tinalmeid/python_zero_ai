@@ -1,6 +1,10 @@
 ## 🔗 Contexto & Task
-- **Task:** CDD-XXX Nome da Task
-- **Relacionado a:** Setup de ambiente / Correção de Bug / Nova Feature
+ **Task:** CDD-XXX Nome da Task
+
+ **Relacionado a:**
+-  [ ] 🏗️ Setup de ambiente
+ - [ ] 🐛 Correção de Bug
+ - [ ] 🐍 Nova Feature
 
 ## 📄 Resumo das Mudanças
 Este PR introduz [descreva a mudança principal, ex: a estrutura inicial do projeto e configurações de CI].

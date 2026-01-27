@@ -51,9 +51,11 @@ jobs:
       # 5 Corrigir caminhos no arquivo coverage.xml (se necessário)
       - name: 🚑 Corrigir Caminhos no XML
         run: |
-          sed -i 's|/home/runner/work/python_zero_a_ai/python_zero_a_ai/||g' coverage.xml
+          # O comando abaixo usa 'wildcards' (*) para pegar o caminho independentemente do nome da pasta
+          sed -i 's|/home/runner/work/[^/]*/[^/]*||g' coverage.xml
 
-          # Opcional: imprimir para garantir que o arquivo foi gerado corretamente
+          # Debug: Vamos ver se funcionou
+          echo "🔎 Verificando correção no coverage.xml:"
           cat coverage.xml | head -n 5
 
       # 6. Enviar análise para o SonarCloud (ação oficial)

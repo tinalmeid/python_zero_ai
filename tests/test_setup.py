@@ -2,8 +2,7 @@ import pytest
 from src.setup_inicial.setup_inicial import (
     validar_porta_rede,
     formatar_hostname,
-    categorizar_latencia,
-    construir_fqdn)
+    categorizar_latencia)
 
 """
 Docstring para test.test_setup

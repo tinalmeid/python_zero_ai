@@ -53,6 +53,9 @@ jobs:
         run: |
           sed -i 's|/home/runner/work/python_zero_a_ai/python_zero_a_ai/||g' coverage.xml
 
+          # Opcional: imprimir para garantir que o arquivo foi gerado corretamente
+          cat coverage.xml | head -n 5
+
       # 6. Enviar análise para o SonarCloud (ação oficial)
       - name: 🚀 Analisar com SonarCloud
         uses: SonarSource/sonarcloud-github-action@v2

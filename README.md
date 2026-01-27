@@ -118,10 +118,10 @@ Para manter a qualidade e a rastreabilidade do projeto, seguimos estritamente:
 
     * Cobertura de testes
         ```bash
-        | Arquivo                            | Stmts | Miss | Cover | Missing | Status  |
-        |------------------------------------|-------|------|-------|---------|---------|
+        | Arquivo                             | Stmts | Miss | Cover | Missing |  Status |
+        |--------------------------------------------------------------------------------|
         | src\setup_inicial\setup_inicial.py     22      0    100%                  ✅
-        |-------------------------------------------------------------------------------
+        |--------------------------------------------------------------------------------|
         | TOTAL                                  22      0    100%                  ✅
         🔢 Stmts (Statements) : Linhas executáveis
         ❌ Miss (Missed) : Linhas que o teste não conseguiu cobrir
@@ -168,10 +168,16 @@ python_zero_a_ai/
 
 Monitoramento de tarefas de desenvolvimento com base no fluxo de trabalho de Engenharia.
 
-| ID Jira     | Módulo / Tarefa                                  | Branch                          | Status       |
-| :---------- | :----------------------------------------------- | :------------------------------ | :----------- |
-| **CDD-5** | 🏗️ Setup: Ambiente, CI/CD e Quality Gate         | CDD-5-chore/setup-ambiente      | 🔄 Em Andamento |
-
+| ID Jira     | 📚 Módulo / Tarefa                                      | Branch                          | Status       |
+| :--- | :--- | :--- | :---: |
+| **CDD-5**   | 🏗️ Setup: Ambiente, CI/CD e Quality Gate                | CDD-5-chore/setup-ambiente       | ✅ Concluído |
+| **CDD-6**   | 🔀 Estruturas de Controle (If, For, While)              | CDD-6-feat/loops-e-condicionais  | 📝 A Fazer   |
+| **CDD-7**   | 🧬 Programação Orientada a Objetos (Classes e Herança)  | CDD-7-feat/poo-fundamentos       | 📝 A Fazer   |
+| **CDD-8**   | 🧩 Funções, Argumentos Dinâmicos e Módulos              | CDD-8-feat/funcoes-e-modulos     | 📝 A Fazer   |
+| **CDD-9**   | 🗃️ Estruturas de Dados (Listas, Sets, Dicts) e Lambda   | CDD-9-feat/estruturas-de-dados   | 📝 A Fazer   |
+| **CDD-10**  | 🛡️ Tratamento de Exceções (Try, Except, Finally)        | CDD-10-feat/tratamento-de-erros  | 📝 A Fazer   |
+| **CDD-11**  | 🏭 Classes, Construtores e Métodos (OOP)                | CDD-11-feat/poo-classes-objetos  | 📝 A Fazer   |
+| **CDD-12**  | 📦 Modularização, Imports e Packages                    | CDD-12-feat/modulos-e-pacotes    | 📝 A Fazer   |
 > **Legenda:** ✅ Concluído | 🔄 Em Andamento | 📝 A Fazer
 
 ## 📄 Licença

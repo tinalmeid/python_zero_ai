@@ -48,6 +48,7 @@ git pull origin main # Pegue as novidades (seu código mergeado)
 git branch # Exibe as branch existentes, a main deve ter um *
 git branch -d CDD-5-chore/setup-ambiente # Apague a branch local
 git push origin --delete CDD-5-chore/setup-ambiente # Apague a branch remota (no GitHub)
+git checkout -b CDD-6-feat/loops-e-condicionais # Cria a nova branch de trabalho
 ```
 
 ## 1. 🛡️ Auto Code Review (Checklist)

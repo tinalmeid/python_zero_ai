@@ -96,7 +96,16 @@ jobs:
           echo "🔎 Conteúdo do coverage.xml após ajustes consolidados:"
           cat coverage.xml
 
-      # 10. Enviar análise para o SonarCloud (ação oficial)
+      # 10. Ajuste final para cobertura
+      - name: 🚑 Ajuste Final para Cobertura
+        run: |
+          sed -i 's|<source>.*|<source>src|g' coverage.xml
+
+          # Debug: Exibir o conteúdo completo do coverage.xml para validação
+          echo "🔎 Conteúdo do coverage.xml após ajuste final:"
+          cat coverage.xml
+
+      # 11. Enviar análise para o SonarCloud (ação oficial)
       - name: 🚀 Analisar com SonarCloud
         uses: SonarSource/sonarcloud-github-action@v2
         env:

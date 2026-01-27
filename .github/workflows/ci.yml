@@ -51,15 +51,12 @@ jobs:
       # 5 Corrigir caminhos no arquivo coverage.xml (se necessário)
       - name: 🚑 Corrigir Caminhos no XML
         run: |
-          echo "📄 Caminho ORIGINAL (Antes):"
-          grep "filename=" coverage.xml | head -n 3
+          # Esse comando procura filename=" e muda para filename="src/
+          sed -i 's|filename="|filename="src/|g' coverage.xml
 
-          # O COMANDO MARRETA 🔨
-          # Substitui "qualquer_coisa/src/" apenas por "src/"
-          sed -i 's|.*/src/|src/|g' coverage.xml
-
-          echo "📄 Caminho CORRIGIDO (Depois):"
-          grep "filename=" coverage.xml | head -n 3
+          # Debug: Vamos conferir se apareceu o src/ antes do nome
+          echo "🔎 Verificando correção no coverage.xml:"
+          cat coverage.xml | head -n 5
 
 
       # 6. Enviar análise para o SonarCloud (ação oficial)

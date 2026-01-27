@@ -8,9 +8,8 @@ from src.setup_inicial.setup_inicial import (
 Docstring para test.test_setup
 Este módulo contém testes unitários para as funções do módulo setup_inicial.
 
-Autor: Tina de Almeida
+Autora: Tina de Almeida
 Data: 2026-01-26
-Versão: 1.0.0
 Task: CDD-5 : [CDD] [PYTHON] Setup: Ambiente, CI/CD e Quality Gate
 """
 

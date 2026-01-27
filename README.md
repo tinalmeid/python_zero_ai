@@ -121,8 +121,10 @@ Para manter a qualidade e a rastreabilidade do projeto, seguimos estritamente:
         | Arquivo                             | Stmts | Miss | Cover | Missing |  Status |
         |--------------------------------------------------------------------------------|
         | src\setup_inicial\setup_inicial.py     22      0    100%                  ✅
+        | src\controle_fluxo\lab_desafio.py      13      0    100%                  ✅
+        | src\setup_inicial\setup_inicial.py     24      0    100%                  ✅
         |--------------------------------------------------------------------------------|
-        | TOTAL                                  22      0    100%                  ✅
+        | TOTAL                                  67     0     100%                  ✅
         🔢 Stmts (Statements) : Linhas executáveis
         ❌ Miss (Missed) : Linhas que o teste não conseguiu cobrir
         🎯 Cover (Coverage) : Porcentagem de cobertura
@@ -171,7 +173,7 @@ Monitoramento de tarefas de desenvolvimento com base no fluxo de trabalho de Eng
 | ID Jira     | 📚 Módulo / Tarefa                                      | Branch                          | Status       |
 | :--- | :--- | :--- | :---: |
 | **CDD-5**   | 🏗️ Setup: Ambiente, CI/CD e Quality Gate                | CDD-5-chore/setup-ambiente       | ✅ Concluído |
-| **CDD-6**   | 🔀 Estruturas de Controle (If, For, While)              | CDD-6-feat/loops-e-condicionais  | 📝 A Fazer   |
+| **CDD-6**   | 🔀 Estruturas de Controle (If, For, While)              | CDD-6-feat/loops-e-condicionais  | ✅ Concluído |
 | **CDD-7**   | 🧬 Programação Orientada a Objetos (Classes e Herança)  | CDD-7-feat/poo-fundamentos       | 📝 A Fazer   |
 | **CDD-8**   | 🧩 Funções, Argumentos Dinâmicos e Módulos              | CDD-8-feat/funcoes-e-modulos     | 📝 A Fazer   |
 | **CDD-9**   | 🗃️ Estruturas de Dados (Listas, Sets, Dicts) e Lambda   | CDD-9-feat/estruturas-de-dados   | 📝 A Fazer   |

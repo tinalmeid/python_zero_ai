@@ -51,33 +51,17 @@ jobs:
       # 5 Corrigir caminhos no arquivo coverage.xml (se necessário)
       - name: 🚑 Corrigir Caminhos no XML
         run: |
-          # Esse comando procura filename=" e muda para filename="src/
+          echo "📄 Caminho ORIGINAL (Antes):"
+          grep "filename=" coverage.xml | head -n 3
+
+          # O COMANDO MARRETA 🔨
+          # Substitui "qualquer_coisa/src/" apenas por "src/"
           sed -i 's|filename="|filename="src/|g' coverage.xml
 
-          # Debug: Vamos conferir se apareceu o src/ antes do nome
-          echo "🔎 Verificando correção no coverage.xml:"
-          cat coverage.xml | head -n 5
+          echo "📄 Caminho CORRIGIDO (Depois):"
+          grep "filename=" coverage.xml | head -n 3
 
-      # 6. Ajustar caminhos absolutos no coverage.xml para garantir compatibilidade com SonarCloud
-      - name: 🚑 Corrigir Caminhos Absolutos no XML
-        run: |
-          sed -i 's|filename=".*src/|filename="src/|g' coverage.xml
-
-          # Debug: Verificar se os caminhos foram ajustados corretamente
-          echo "🔎 Verificando correção no coverage.xml após ajuste de caminhos absolutos:"
-          cat coverage.xml | head -n 10
-
-      # 7. Ajustar caminhos de forma robusta no coverage.xml
-      - name: 🚑 Correção Definitiva de Caminhos no XML
-        run: |
-          sed -i 's|filename=".*src/|filename="src/|g' coverage.xml
-          sed -i 's|<source>.*src|<source>src|g' coverage.xml
-
-          # Debug: Exibir o conteúdo completo do coverage.xml para validação
-          echo "🔎 Conteúdo do coverage.xml após ajustes definitivos:"
-          cat coverage.xml
-
-      # 8. Enviar análise para o SonarCloud (ação oficial)
+      # 11. Enviar análise para o SonarCloud (ação oficial)
       - name: 🚀 Analisar com SonarCloud
         uses: SonarSource/sonarcloud-github-action@v2
         env:

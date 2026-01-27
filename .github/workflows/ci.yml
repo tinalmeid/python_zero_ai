@@ -77,7 +77,17 @@ jobs:
           echo "🔎 Conteúdo do coverage.xml após ajustes definitivos:"
           cat coverage.xml
 
-      # 8. Enviar análise para o SonarCloud (ação oficial)
+      # 8. Consolidar ajustes no coverage.xml
+      - name: 🚑 Ajuste Consolidado de Caminhos no XML
+        run: |
+          sed -i 's|filename=".*src/|filename="src/|g' coverage.xml
+          sed -i 's|<source>.*src|<source>src|g' coverage.xml
+
+          # Debug: Exibir o conteúdo completo do coverage.xml para validação
+          echo "🔎 Conteúdo do coverage.xml após ajustes consolidados:"
+          cat coverage.xml
+
+      # 9. Enviar análise para o SonarCloud (ação oficial)
       - name: 🚀 Analisar com SonarCloud
         uses: SonarSource/sonarcloud-github-action@v2
         env:

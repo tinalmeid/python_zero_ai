@@ -29,69 +29,33 @@ jobs:
       - name: 🐍 Configurar Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.12'  # Versão do Python utilizada no projeto
-
-      # 2.1 Configurar Java 17 (requerido pelos scanners mais recentes)
-      - name: ☕ Configurar Java 17
-        uses: actions/setup-java@v3
-        with:
-          distribution: 'temurin'
-          java-version: '17'
+          python-version: '3.10'  # Versão do Python utilizada no projeto
 
       # 3. Instalar dependências necessárias (inclusive pytest e coverage, se necessário)
       - name: 📦 Instalar Dependências
         run: |
           python -m pip install --upgrade pip
-          pip install -r requirements.txt
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+          # Garante que as ferramentas de teste estão instaladas
+          pip install pytest pytest-cov
 
       # 4. Roda os testes e gera o relatório de cobertura
       # O Comando --cov=, calcula a cobertura do código na pasta especificada
       # O comando --cov-report=xml gera o relatório em formato XML, necessário para o SonarCloud
       - name: 🧪 Rodar Testes com Cobertura
         run: |
-          pytest --cov=src --cov-config=.coveragerc --cov-report=term-missing --cov-report=xml:coverage.xml
-          ls -lah coverage.xml
+          # --cov=src: Analisa a pasta src
+          # --cov-report=xml: Gera o arquivo coverage.xml para o Sonar ler
+          pytest --cov=src --cov-report=xml
 
-      # 4.1 Validar que coverage.xml aponta para src/ corretamente
-      - name: 🔎 Validar coverage aponta para src
+      # 5 Corrigir caminhos no arquivo coverage.xml (se necessário)
+      - name: 🚑 Corrigir Caminhos no XML
         run: |
-          echo "=== Diretório atual ==="
-          pwd
-          echo ""
-          echo "=== Arquivos no workspace ==="
-          ls -la
-          echo ""
-          echo "=== Verificando coverage.xml ==="
-          if [ -f coverage.xml ]; then
-            echo "✓ coverage.xml existe"
-            wc -l coverage.xml
-            grep -n "src/setup_inicial/setup_inicial.py" coverage.xml || echo "⚠ Caminho não encontrado"
-            echo ""
-            echo "=== Primeiras 80 linhas do coverage.xml ==="
-            head -n 80 coverage.xml
-          else
-            echo "✗ coverage.xml NÃO EXISTE!"
-            exit 1
-          fi
+          sed -i 's|/home/runner/work/python_zero_a_ai/python_zero_a_ai/||g' coverage.xml
 
-      # 5. Enviar análise para o SonarCloud (ação oficial)
+      # 6. Enviar análise para o SonarCloud (ação oficial)
       - name: 🚀 Analisar com SonarCloud
         uses: SonarSource/sonarcloud-github-action@v2
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          args: >
-            -Dsonar.projectKey=tinalmeid_python_zero__ai
-            -Dsonar.organization=tinalmeid
-            -Dsonar.python.version=3.12
-            -Dsonar.sources=src
-            -Dsonar.tests=tests
-            -Dsonar.test.inclusions=tests/**/*
-            -Dsonar.python.coverage.reportPaths=coverage.xml
-            -Dsonar.verbose=true
-
-
-
-
-

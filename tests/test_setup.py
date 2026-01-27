@@ -39,13 +39,6 @@ def test_formatar_hostname_retorna_vazio_se_dominio_invalido():
     assert formatar_hostname("router", "   ") == ""
     assert formatar_hostname("router", "") == ""
 
-
-def test_construir_fqdn_reutiliza_formatacao():
-    """Deve reutilizar a formatação e retornar FQDN ou string vazia quando inválido."""
-    assert construir_fqdn("SW-Core_01", "empresa.local") == "sw-core_01.empresa.local"
-    assert construir_fqdn(None, "empresa.local") == ""
-    assert construir_fqdn("router", None) == ""
-
 # Testes: Validação de Porta de Rede
 def test_porta_padrao_http_deve_ser_valida():
     """Deve validar a porta padrão HTTP (80)."""

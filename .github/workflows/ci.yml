@@ -58,6 +58,15 @@ jobs:
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          args: >
+            -Dsonar.projectKey=tinalmeid_python_zero__ai
+            -Dsonar.organization=tinalmeid
+            -Dsonar.python.version=3.12
+            -Dsonar.sources=src
+            -Dsonar.tests=tests
+            -Dsonar.test.inclusions=tests/**/*
+            -Dsonar.python.coverage.reportPaths=coverage.xml
 
 
 

@@ -1,4 +1,5 @@
-# 📊 PyFinance: Análise de Dados Financeiros
+# 📊 PYTHON do ZERO -> AI Programação PYTHON Do Zero a Inteligência Artificial 2026
+
 
 ![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=tinalmeid_PYTHON-analise-de-dados-financeiros&metric=alert_status)
 ![Coverage](https://sonarcloud.io/api/project_badges/measure?project=tinalmeid_PYTHON-analise-de-dados-financeiros&metric=coverage)
@@ -122,12 +123,12 @@ Para manter a qualidade e a rastreabilidade do projeto, seguimos estritamente:
         | src\setup_inicial\setup_inicial.py     22      0    100%                  ✅
         |-------------------------------------------------------------------------------
         | TOTAL                                  22      0    100%                  ✅
-        |
-        ```
-        >🔢 Stmts (Statements) : Linhas executáveis
+
+        🔢 Stmts (Statements) : Linhas executáveis
         ❌ Miss (Missed) : Linhas que o teste não conseguiu cobrir
         🎯 Cover (Coverage) : Porcentagem de cobertura
         🔍 Missing (Linhas Faltantes) : Linhas que não foram cobertas por teste
+        ```
 4.  **🛡️ Quality Gate:**
 
     - Para aceite de Pull Requests será necessário aprovação do checklist de QA (Sonar + W3C).

@@ -15,9 +15,9 @@ git pull origin main # Pegue as novidades (seu código mergeado)
 ```
 
 ### 2. Crie a branch da sua tarefa (Ex: Task CDD-586)
-git checkout -b ID-JIRA-tipo-nome-da-tarefa
+git checkout -b ID-JIRA-tipo/nome-da-tarefa
 ```Bash
-git checkout -b CDD-586-chore/setup-ambiente
+git checkout -b CDD-5-chore/setup-ambiente
 ```
 
 ### 3. Salvar o Código (Commit)
@@ -27,13 +27,13 @@ O padrão de mensagem é: CDD-ID tipo(escopo): descrição.
 git cd .. # Volta a raiz do projeto, se necessário
 git status # Mostra os arquivos modificados
 git add . # Adicione os arquivos modificados
-git commit -m "CDD-586 chore(setup): configura ambiente e ci/cd" # Faça o commit seguindo o padrão
+git commit -m "CDD-5 chore(setup): configura ambiente e ci/cd" # Faça o commit seguindo o padrão
 ```
 ### 4. Enviar para o Repositório Remoto (Github)
 Na primeira vez que subir a branch, você precisa ligar ela ao remoto (-u).
 
 ```Bash
-git push -u origin CDD-586-chore-setup-ambiente
+git push -u origin CDD-5-chore/setup-ambiente
 ```
 Próximas Vezes (Só atualizar): Como o vínculo já existe, basta rodar:
 ```Bash
@@ -46,8 +46,8 @@ Depois que seu PR for aprovado e mergeado na `main`, apague a branch velha para 
 git checkout main # Volte para a main
 git pull origin main # Pegue as novidades (seu código mergeado)
 git branch # Exibe as branch existentes, a main deve ter um *
-git branch -d CDD-586-chore-setup-ambiente # Apague a branch local
-git push origin --delete CDD-586-chore-setup-ambiente # Apague a branch remota (no GitHub)
+git branch -d CDD-5-chore/setup-ambiente # Apague a branch local
+git push origin --delete CDD-5-chore/setup-ambiente # Apague a branch remota (no GitHub)
 ```
 
 ## 1. 🛡️ Auto Code Review (Checklist)

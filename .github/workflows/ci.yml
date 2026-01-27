@@ -80,7 +80,7 @@ jobs:
       # 8. Ajustar o elemento <source> no coverage.xml
       - name: 🚑 Corrigir Elemento <source> no XML
         run: |
-          sed -i 's|<source>C:\\Users\\tinal\\Projetos\\python_zero_a_ai\\src|<source>src|g' coverage.xml
+          sed -i 's|<source>src|<source>C:\\Users\\tinal\\Projetos\\python_zero_a_ai\\src|g' coverage.xml
 
           # Debug: Exibir o conteúdo completo do coverage.xml para validação
           echo "🔎 Conteúdo do coverage.xml após ajuste do <source>:"

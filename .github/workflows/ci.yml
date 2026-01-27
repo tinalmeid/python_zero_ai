@@ -55,11 +55,24 @@ jobs:
       # 4.1 Validar que coverage.xml aponta para src/ corretamente
       - name: 🔎 Validar coverage aponta para src
         run: |
-          echo "=== Verificando coverage.xml ==="
-          grep -n "src/setup_inicial/setup_inicial.py" coverage.xml || echo "Aviso: arquivo não encontrado em coverage.xml"
+          echo "=== Diretório atual ==="
+          pwd
           echo ""
-          echo "=== Primeiras 60 linhas do coverage.xml ==="
-          head -n 60 coverage.xml
+          echo "=== Arquivos no workspace ==="
+          ls -la
+          echo ""
+          echo "=== Verificando coverage.xml ==="
+          if [ -f coverage.xml ]; then
+            echo "✓ coverage.xml existe"
+            wc -l coverage.xml
+            grep -n "src/setup_inicial/setup_inicial.py" coverage.xml || echo "⚠ Caminho não encontrado"
+            echo ""
+            echo "=== Primeiras 80 linhas do coverage.xml ==="
+            head -n 80 coverage.xml
+          else
+            echo "✗ coverage.xml NÃO EXISTE!"
+            exit 1
+          fi
 
       # 5. Enviar análise para o SonarCloud (ação oficial)
       - name: 🚀 Analisar com SonarCloud
@@ -76,6 +89,7 @@ jobs:
             -Dsonar.tests=tests
             -Dsonar.test.inclusions=tests/**/*
             -Dsonar.python.coverage.reportPaths=coverage.xml
+            -Dsonar.verbose=true
 
 
 

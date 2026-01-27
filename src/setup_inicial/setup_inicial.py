@@ -1,6 +1,6 @@
 """
 Docstring para src.setup_inicial.setup_inicial
-Este módulo pode conter funções e classes relacionadas à configuração inicial do projeto.
+Descrição: Este módulo pode conter funções e classes relacionadas à configuração inicial do projeto.
 Servindo como ponto de partida para outras funcionalidades.
 
 Autora: Tina de Almeida

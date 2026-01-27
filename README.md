@@ -118,13 +118,15 @@ Para manter a qualidade e a rastreabilidade do projeto, seguimos estritamente:
 
     * Cobertura de testes
         ```bash
-        | Arquivo                             | Stmts | Miss | Cover | Missing |  Status |
-        |--------------------------------------------------------------------------------|
-        | src\setup_inicial\setup_inicial.py     22      0    100%                  ✅
-        | src\controle_fluxo\lab_desafio.py      13      0    100%                  ✅
-        | src\setup_inicial\setup_inicial.py     24      0    100%                  ✅
-        |--------------------------------------------------------------------------------|
-        | TOTAL                                  67     0     100%                  ✅
+        | Arquivo                                | Stmts | Miss | Cover | Missing | Status |
+        |----------------------------------------------------------------------------------|
+        |src\controle_fluxo\aula_estruturas.py      30      0      100%              ✅
+        |src\controle_fluxo\lab_desafio.py          13      0      100%              ✅
+        |src\poo_fundamentos\agregacao.py           11      0      100%              ✅
+        |src\poo_fundamentos\sistema_escola.py      31      0      100%              ✅
+        |src\setup_inicial\setup_inicial.py         24      0      100%              ✅
+        |----------------------------------------------------------------------------------|
+        | TOTAL                                     109     0      100%              ✅
         🔢 Stmts (Statements) : Linhas executáveis
         ❌ Miss (Missed) : Linhas que o teste não conseguiu cobrir
         🎯 Cover (Coverage) : Porcentagem de cobertura
@@ -147,19 +149,43 @@ Para manter a qualidade e a rastreabilidade do projeto, seguimos estritamente:
 python_zero_a_ai/
 ├── .github/
 │   ├── workflows/                 # 🤖 Automação (GitHub Actions)
-    └── PULL_REQUEST_TEMPLATE.md   # 📋 Template de Descrição Automática
+|   └── PULL_REQUEST_TEMPLATE.md   # 📋 Template de Descrição Automática
 ├── docs/                          # 📘 Documentação de Padrões
 │   ├── PADROES_GIT.md             # 🔀 Processos (Review, Merge)
 │   ├── SOLID.md                   # 🧱 Arquitetura (SRP)
 │   └── CLEAN_CODE.md              # 🧹 Estilo (Nomes, Docs)
 ├── src/                           # 🧠 Código Fonte (Módulos do Curso)
 │   ├── __init__.py
-│   └── setup_inicial/             # 📂 Módulo 01: Setup e Boas Práticas
-│       ├── __init__.py
-│       └── setup_inicial.py       # 🐍 Funções de exemplo (SOLID/Clean Code)
+│   ├── setup_inicial/             # 🏗️ Módulo 01: Setup e Boas Práticas
+│   │   └── 🐍 setup_inicial.py
+|   ├── controle_fluxo/            # 🔀 Módulo 02: Lógica de Programação
+│   │   ├── 📘 aula_estruturas.py       (If, For, While)
+│   │   └── 🧩 lab_desafio.py           (Algoritmo de Separação)
+|   ├── poo-fundamentos/           # 🧬 Módulo 03: Orientação a Objetos
+|   │   ├── 🏫 sistema_escola.py        (Herança e Polimorfismo)
+|   │   └── 🚗 agregacao.py             (Relação entre Objetos)
+|   ├──                            # 🔧 Funções
+|   |   ├──
+|   │   └──
+|   ├──                            # 🗃️ Estruturas de Dados
+|   |   ├──
+|   │   └──
+|   ├──                            # 🛡️ Tratamento de Exceções
+|   |   ├──
+|   │   └──
+|   ├──                            # 🏭 Classes, Construtores e Métodos
+|   |   ├──
+|   │   └──
+|   ├──                            # 🏭 Classes, Construtores e Métodos (OOP)
+|   |   ├──
+|   │   └──
+|   ├──                            # 📦 Modularização, Imports e Package
+|   |   ├──
+|   │   └──
 ├── tests/                         # 🧪 Testes Unitários (Pytest)
-│   ├── __init__.py
-│   └── test_setup_inicial.py
+│   ├── 🩺 test_setup_inicial.py
+│   ├── 🩺 test_controle_fluxo.py
+│   └── 🩺 test_poo_fundamentos.py
 ├── .gitignore                     # 🙈 Arquivos ignorados pelo Git
 ├── README.md                      # 📘 Documentação do Projeto
 ├── requirements.txt               # 📦 Lista de Dependências

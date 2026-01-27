@@ -39,6 +39,22 @@ def formatar_hostname(nome_do_host: str, nome_do_dominio: str) -> str:
 
     return f"{nome_limpo}.{dominio_limpo}"
 
+
+def construir_fqdn(nome_do_host: str, nome_do_dominio: str) -> str:
+    """
+    Constrói um FQDN (Fully Qualified Domain Name) reutilizando a lógica de formatação.
+
+    Retorna string vazia se host ou domínio forem inválidos.
+
+    Args:
+        nome_do_host (str): Parte do hostname.
+        nome_do_dominio (str): Domínio a ser anexado.
+
+    Returns:
+        str: FQDN em minúsculas ou string vazia se inválido.
+    """
+    return formatar_hostname(nome_do_host, nome_do_dominio)
+
 def validar_porta_rede(num_porta: int) -> bool:
     """
     Docstring para validar_porta_rede

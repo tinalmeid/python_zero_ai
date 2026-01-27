@@ -77,7 +77,16 @@ jobs:
           echo "🔎 Conteúdo do coverage.xml após ajustes definitivos:"
           cat coverage.xml
 
-      # 8. Consolidar ajustes no coverage.xml
+      # 8. Ajustar o elemento <source> no coverage.xml
+      - name: 🚑 Corrigir Elemento <source> no XML
+        run: |
+          sed -i 's|<source>C:\\Users\\tinal\\Projetos\\python_zero_a_ai\\src|<source>src|g' coverage.xml
+
+          # Debug: Exibir o conteúdo completo do coverage.xml para validação
+          echo "🔎 Conteúdo do coverage.xml após ajuste do <source>:"
+          cat coverage.xml
+
+      # 9. Consolidar ajustes no coverage.xml
       - name: 🚑 Ajuste Consolidado de Caminhos no XML
         run: |
           sed -i 's|filename=".*src/|filename="src/|g' coverage.xml
@@ -87,7 +96,7 @@ jobs:
           echo "🔎 Conteúdo do coverage.xml após ajustes consolidados:"
           cat coverage.xml
 
-      # 9. Enviar análise para o SonarCloud (ação oficial)
+      # 10. Enviar análise para o SonarCloud (ação oficial)
       - name: 🚀 Analisar com SonarCloud
         uses: SonarSource/sonarcloud-github-action@v2
         env:

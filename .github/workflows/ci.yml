@@ -52,6 +52,15 @@ jobs:
           pytest --cov=src --cov-config=.coveragerc --cov-report=term-missing --cov-report=xml:coverage.xml
           ls -lah coverage.xml
 
+      # 4.1 Validar que coverage.xml aponta para src/ corretamente
+      - name: 🔎 Validar coverage aponta para src
+        run: |
+          echo "=== Verificando coverage.xml ==="
+          grep -n "src/setup_inicial/setup_inicial.py" coverage.xml || echo "Aviso: arquivo não encontrado em coverage.xml"
+          echo ""
+          echo "=== Primeiras 60 linhas do coverage.xml ==="
+          head -n 60 coverage.xml
+
       # 5. Enviar análise para o SonarCloud (ação oficial)
       - name: 🚀 Analisar com SonarCloud
         uses: SonarSource/sonarcloud-github-action@v2

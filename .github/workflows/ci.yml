@@ -87,10 +87,10 @@ jobs:
           cat coverage.xml
 
       # 9. Consolidar ajustes no coverage.xml
-      - name: 🚑 Ajuste Consolidado de Caminhos no XML
+      - name: 🚑 Ajuste Consolidado no XML
         run: |
           sed -i 's|filename=".*src/|filename="src/|g' coverage.xml
-          sed -i 's|<source>.*src|<source>src|g' coverage.xml
+          sed -i 's|<source>.*|<source>src|g' coverage.xml
 
           # Debug: Exibir o conteúdo completo do coverage.xml para validação
           echo "🔎 Conteúdo do coverage.xml após ajustes consolidados:"

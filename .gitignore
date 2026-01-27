@@ -1,0 +1,105 @@
+#==============================
+# 1. Sistema Operacional
+#==============================
+# Arquivos gerados pelo sistema operacional que não são relevantes para o projeto.
+.DS_Store
+Thumbs.db
+
+#====================================
+# 1. Compilado, Cache e Logs
+#====================================
+# O Python gera esses arquivos binários para acelerar a execução.
+# Não devem ser versionados pois são gerados localmente, não necessários no repositório.
+__pycache__/
+*.py[cod]
+*$py.class
+*.log
+
+#====================================
+# 2. IDES e Editores de Texto
+#====================================
+# Configurações específicas de IDEs e editores de texto.
+.vscode/
+.idea/
+.history/
+*.swp
+
+#====================================
+# 3. Ambiente Virtual (venv)
+#====================================
+# Pastas onde as dependências do projeto são instaladas.
+# Cada desenvolvedor deve criar seu próprio ambiente virtual localmente.
+# Falhas de segurança podem ocorrer se arquivos de ambiente virtual forem versionados.
+venv/
+.venv/
+env/
+.env/
+
+#====================================
+# 4. Variaveis de Ambiente e Segurança
+#====================================
+# Arquivos que armazenam variáveis sensíveis, como chaves de API e senhas.
+# Nunca devem ser versionados para evitar exposição de informações sensíveis.
+.env
+.env.local
+.env.*.local
+secrets.json
+
+#====================================
+# 5. Distribuição e Builds
+#====================================
+# Arquivos gerados durante o processo de build ou distribuição do projeto.
+dist/
+build/
+*.egg-info/
+
+#====================================
+# 6. Testes e Cobertura
+#====================================
+# Arquivos gerados por ferramentas de teste e cobertura de código.
+.coverage
+htmlcov/
+.pytest_cache/
+.mypy_cache/
+nosetests.xml
+coverage.xml
+
+#==============================================================
+# --------------------ESPECÍFICOS PARA O PROJETO---------------
+#==============================================================
+
+#====================================
+# 7. Automação de Rede e Logs (Netmiko/Napalm/Ansible)
+#====================================
+# Arquivos de log e configuração gerados por scripts de automação de rede.
+session.log
+netmiko_session.log
+# Inventários costumam ter IPs reais
+inventory.yml
+inventory.yaml
+hosts.yml
+hosts.yaml
+
+#====================================
+# 8. AWS e Serviços em Nuvem
+#====================================
+# Arquivos gerados por ferramentas de gerenciamento de infraestrutura em nuvem.
+.aws/
+aws_credentials
+aws_config
+
+#====================================
+# 9. GNS3 e Simulação de Redes
+#====================================
+# Arquivos e pastas gerados por ferramentas de simulação de redes.
+*.gns3
+*.gns3project
+project-files/
+images/
+snapshots/
+
+#====================================
+# 10. Bancos de Dados
+#====================================
+# Arquivos de banco de dados locais.
+*.db

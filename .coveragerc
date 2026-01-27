@@ -1,0 +1,35 @@
+#=======================================================
+# Arquivo de configuração do Coverage
+#=======================================================
+# Este arquivo configura como a cobertura de testes é calculada,
+# incluindo quais arquivos devem ser ignorados.
+
+[run]
+# Arquivos e diretórios a serem omitidos da análise de cobertura
+omit =
+    # Arquivos __init__.py geralmente são vazios e não precisam de testes
+    **/__init__.py
+    venv/*
+    */venv/*
+    .venv/*
+
+[report]
+# Linhas que devem ser ignoradas ao calcular a cobertura
+exclude_lines =
+    # Padrão padrão do coverage
+    pragma: no cover
+    # Métodos especiais que geralmente não precisam de teste
+    def __repr__
+    def __str__
+    # Exceções que não esperamos testar
+    raise AssertionError
+    raise NotImplementedError
+    # Blocos que só rodam quando executado diretamente
+    if __name__ == .__main__.:
+    # Imports de tipo que só existem em tempo de verificação de tipo
+    if TYPE_CHECKING:
+    # Debugging
+    if DEBUG:
+    # Abstract methods
+    @abstractmethod
+    @abstract

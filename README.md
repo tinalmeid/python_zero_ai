@@ -1,0 +1,181 @@
+# 📊 PyFinance: Análise de Dados Financeiros
+
+![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=tinalmeid_PYTHON-analise-de-dados-financeiros&metric=alert_status)
+![Coverage](https://sonarcloud.io/api/project_badges/measure?project=tinalmeid_PYTHON-analise-de-dados-financeiros&metric=coverage)
+![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=tinalmeid_PYTHON-analise-de-dados-financeiros&metric=duplicated_lines_density)
+![Build Status](https://github.com/tinalmeid/PYTHON-analise-de-dados-financeiros/actions/workflows/ci.yml/badge.svg)
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
+
+### Desenvolvimento
+
+![Python](https://img.shields.io/badge/Python-3.10-3776AB?style=flat&logo=python&logoColor=white)
+![Pytest](https://img.shields.io/badge/Testes-Pytest-0A9EDC?style=flat&logo=pytest&logoColor=white)
+![Pandas](https://img.shields.io/badge/Dados-Pandas-150458?style=flat&logo=pandas&logoColor=white)
+![VS Code](https://img.shields.io/badge/IDE-VS_Code-007ACC?style=flat&logo=visualstudiocode&logoColor=white")
+![Github Copilot](https://img.shields.io/badge/AI-Copilot-000000?style=flat&logo=githubcopilot&logoColor=white)
+
+### Gestão & DevOps
+
+![Jira](https://img.shields.io/badge/Gestão-Jira-0052CC?style=flat&logo=jira&logoColor=white)
+![Azure](https://img.shields.io/badge/DevOps-Azure-0078D7?style=flat&logo=azuredevops&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/CI-GitHub_Actions-2088FF?style=flat&logo=githubactions&logoColor=white)
+![SonarCloud](https://img.shields.io/badge/Quality-SonarCloud-F3702A?style=flat&logo=sonarcloud&logoColor=white)
+![Clean Code](https://img.shields.io/badge/Prática-Clean_Code-green?style=flat&logo=geocaching&logoColor=white)
+![Code Style](https://img.shields.io/badge/Code_Style-PEP8-brightgreen?style=flat)
+
+### Produtividade & Aprendizado
+
+![WakaTime](https://img.shields.io/badge/Produtividade-Wakatime-000000?style=flat&logo=wakatime&logoColor=white)
+![Udemy](https://img.shields.io/badge/Plataforma-Udemy-EC5252?style=flat&logo=udemy&logoColor=white)
+
+Este repositório hospeda o desenvolvimento do **Aprendizado do Uso de Python para AI**, um monólito com diversos exemplo de aplicação do Python para análise de dados.
+
+Aqui o foco é **Engenharia de Software aplicada a Dados**. O projeto recursos avançados da linguagem (List Comprehensions, Map/Reduce, File I/O) com uma arquitetura blindada por testes automatizados e análise estática.
+
+## 📚 Curso de Referência
+
+Udemy: [Introdução à linguagem Python](https://www.udemy.com/course/programacao-python-do-basico-ao-avancado/learn/lecture/51564387#overview)
+
+## 🚀 Como Rodar (Quick Start)
+
+### Pre-requisitos
+
+- Python 3.8 or higher
+- pip (Python package manager)
+
+### Instalação
+
+1. 📥**Clone o repositório:**
+
+   ```bash
+   git clone https://github.com/tinalmeid/python_zero__ai
+   ```
+
+2. 🐍**Crie o ambiente virtual:**
+
+   ```bash
+   python -m venv venv
+   # Windows:
+   .\venv\Scripts\activate
+   # Linux/Mac:
+   source venv/bin/activate
+   ```
+
+3. 📦**Instale as dependências:**
+
+   ```bash
+   pip install --upgrade pip
+   pip install -r requirements.txt
+   ```
+
+4. 🔬**Rode os Testes:**
+
+   ```bash
+   pytest tests/ -v
+   ```
+
+## 🧪 Padrões de Qualidade (QA Engineering)
+
+Para garantir a excelência do código, este projeto utiliza um Quality Gate rigoroso:
+
+1. Linting (Pylint): O código deve seguir a PEP8.
+
+2. Testes (Pytest): Cobertura mínima exigida pelo SonarCloud.
+
+3. Clean Code: Funções pequenas, nomes descritivos e princípios SOLID.
+
+4. Code Review: Nenhum código entra na main sem passar pela pipeline de CI.
+
+## 📝 Development Guidelines
+
+Para manter a qualidade e a rastreabilidade do projeto, seguimos estritamente:
+
+1.  **🌿 Branching Strategy:**
+
+    - Toda branch deve começar com a chave do Jira: `CDD-XXX-nome-da-tarefa`.
+    - Ex: `CDD-577-setup-ambiente`.
+
+2.  **💾 Padrão de Commit (Conventional Commits):**
+
+    - Formato: `CDD-XXX tipo: Descrição breve`.
+    - Tipos permitidos:
+      - `chore`: Configurações e manutenção.
+      - `docs`: Documentação.
+      - `feat`: Nova funcionalidade.
+      - `test`: Testes.
+      - `refactor`: Melhoria de código sem alterar funcionalidade.
+      - `fix`: Correção de bug.
+    - Ex: `CDD-586 chore: Configura pipeline inicial`.
+
+3.  **🧪 Testes & TDD:**
+
+    - Toda nova funcionalidade em `src/` deve ter um teste correspondente em `tests/`.
+    - Rode `pytest` localmente antes de subir o código.
+     * Toda lógica de negócio deve ter teste unitário (.test.js).
+
+    * O Pipeline falha se a cobertura for inferior a 80%.
+
+    * Cobertura de testes
+        ```bash
+        | Arquivo                            | Stmts | Miss | Cover | Missing | Status  |
+        |------------------------------------|-------|------|-------|---------|---------|
+        | src\setup_inicial\setup_inicial.py     22      0    100%                  ✅
+        |-------------------------------------------------------------------------------
+        | TOTAL                                  22      0    100%                  ✅
+        |
+        ```
+        >🔢 Stmts (Statements) : Linhas executáveis
+        ❌ Miss (Missed) : Linhas que o teste não conseguiu cobrir
+        🎯 Cover (Coverage) : Porcentagem de cobertura
+        🔍 Missing (Linhas Faltantes) : Linhas que não foram cobertas por teste
+4.  **🛡️ Quality Gate:**
+
+    - Para aceite de Pull Requests será necessário aprovação do checklist de QA (Sonar + W3C).
+
+    - Código sem Docstrings (documentação de função) será reprovado no Code Review.
+    - Mantenha o **SonarCloud** feliz: Zero "Bugs", Zero "Vulnerabilities" e Cobertura aceitável.
+
+5.  **🧹 Clean Code:**
+    - Variáveis descritivas (nada de `x`, `y`, `aux`).
+    - Respeite o **PEP8** (o `pylint` vai reclamar se não fizer!).
+
+## 🏗️ Estrutura do Projeto
+
+```
+python_zero_a_ai/
+├── .github/
+│   ├── workflows/                 # 🤖 Automação (GitHub Actions)
+    └── PULL_REQUEST_TEMPLATE.md   # 📋 Template de Descrição Automática
+├── docs/                          # 📘 Documentação de Padrões
+│   ├── PADROES_GIT.md             # 🔀 Processos (Review, Merge)
+│   ├── SOLID.md                   # 🧱 Arquitetura (SRP)
+│   └── CLEAN_CODE.md              # 🧹 Estilo (Nomes, Docs)
+├── src/                           # 🧠 Código Fonte (Módulos do Curso)
+│   ├── __init__.py
+│   └── setup_inicial/             # 📂 Módulo 01: Setup e Boas Práticas
+│       ├── __init__.py
+│       └── setup_inicial.py       # 🐍 Funções de exemplo (SOLID/Clean Code)
+├── tests/                         # 🧪 Testes Unitários (Pytest)
+│   ├── __init__.py
+│   └── test_setup_inicial.py
+├── .gitignore                     # 🙈 Arquivos ignorados pelo Git
+├── README.md                      # 📘 Documentação do Projeto
+├── requirements.txt               # 📦 Lista de Dependências
+└── sonar-project.properties       # 📡 Configuração do SonarCloud
+```
+
+## 🗺️ Roadmap & Entregas (Jira)
+
+Monitoramento de tarefas de desenvolvimento com base no fluxo de trabalho de Engenharia.
+
+| ID Jira     | Módulo / Tarefa                                  | Branch                          | Status       |
+| :---------- | :----------------------------------------------- | :------------------------------ | :----------- |
+| **CDD-5** | 🏗️ Setup: Ambiente, CI/CD e Quality Gate         | CDD-5-chore/setup-ambiente      | 🔄 Em Andamento |
+
+> **Legenda:** ✅ Concluído | 🔄 Em Andamento | 📝 A Fazer
+
+## 📄 Licença
+
+Este projeto faz parte de um curso de aprendizagem. Sinta-se à vontade para utilizá-lo para fins educacionais.
+
+👩🏽‍💻 Desenvolvido por **Cristina de Almeida** como parte do plano de desenvolvimento técnico.

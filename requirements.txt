@@ -1,0 +1,13 @@
+# --- Qualidade e Testes (Para SonarCloud) ---
+pytest
+pytest-cov
+flake8
+black
+
+# --- Segurança e Configuração ---
+python-dotenv
+
+# --- Automação de Rede e Cloud (Ferramentas do projeto) ---
+netmiko
+napalm
+boto3

@@ -8,52 +8,54 @@ on:
     branches:
       - main # Gatilho para pushes na branch main
   pull_request:
-      types: [opened, synchronize, reopened] # Gatilho para pull requests
+    types: [opened, synchronize, reopened] # Gatilho para pull requests
 
 
 jobs:
-    sonarcloud:
-        name: 📡 SonarCloud Scan
-        runs-on: ubuntu-latest
+  sonarcloud:
+    name: 📡 SonarCloud Scan
+    runs-on: ubuntu-latest
 
-        steps:
-            # 1. Baixar o código-fonte do repositório
-          - name: 📥 Checkout do Código
-            uses: actions/checkout@v3
-            with:
-              # fetch-depth: 0 é OBRIGATÓRIO para análises do SonarCloud
-              # Ele garante que todo o histórico do Git seja baixado para saber o que é "New Code"
-              fetch-depth: 0
+    steps:
+      # 1. Baixar o código-fonte do repositório
+      - name: 📥 Checkout do Código
+        uses: actions/checkout@v4
+        with:
+          # fetch-depth: 0 é OBRIGATÓRIO para análises do SonarCloud
+          # Ele garante que todo o histórico do Git seja baixado para saber o que é "New Code"
+          fetch-depth: 0
 
-            # 2. Configurar o ambiente Python
-          - name: 🐍 Configurar Python
-            uses: actions/setup-python@v4
-            with:
-              python-version: '3.12'  # Versão do Python utilizada no projeto
+      # 2. Configurar o ambiente Python
+      - name: 🐍 Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'  # Versão do Python utilizada no projeto
 
-            # 3. Instalar dependências necessárias (inclusive pytest e coverage, se necessário)
-          - name: 📦 Instalar Dependências
-            run: |
-              python -m pip install --upgrade pip
-              pip install -r requirements.txt
+      # 3. Instalar dependências necessárias (inclusive pytest e coverage, se necessário)
+      - name: 📦 Instalar Dependências
+        run: |
+          python -m pip install --upgrade pip
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+          # Garante que as ferramentas de teste estão instaladas
+          pip install pytest pytest-cov
 
-            # 4. Roda os testes e gera o relatório de cobertura
-            # O Comando --cov=, calcula a cobertura do código na pasta especificada
-            # O comando --cov-report=xml gera o relatório em formato XML, necessário para o SonarCloud
-          - name: 🧪 Rodar Testes com Cobertura
-            run: |
-              pytest --cov=. --cov-report=xml:coverage.xml
+      # 4. Roda os testes e gera o relatório de cobertura
+      # O Comando --cov=, calcula a cobertura do código na pasta especificada
+      # O comando --cov-report=xml gera o relatório em formato XML, necessário para o SonarCloud
+      - name: 🧪 Rodar Testes com Cobertura
+        run: |
+          # --cov=src: Analisa a pasta src
+          # --cov-report=xml: Gera o arquivo coverage.xml para o Sonar ler
+          pytest --cov=src --cov-report=xml
 
-            # 5. Enviar análise para o SonarCloud
-          - name: 🚀 Analisar com SonarCloud
-            uses: SonarSource/sonarcloud-github-action@master
-            env:
-              # Autenticação com o SonarCloud via Token
-              SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-              # Autenticação GitAction para o SonarCloud
-              GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      # 5 Corrigir caminhos no arquivo coverage.xml (se necessário)
+      - name: 🚑 Corrigir Caminhos no XML
+        run: |
+          sed -i 's|/home/runner/work/python_zero_a_ai/python_zero_a_ai/||g' coverage.xml
 
-
-
-
-
+      # 6. Enviar análise para o SonarCloud (ação oficial)
+      - name: 🚀 Analisar com SonarCloud
+        uses: SonarSource/sonarcloud-github-action@v2
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

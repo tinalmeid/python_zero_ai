@@ -1,5 +1,5 @@
 ## 🔗 Contexto & Task
-- **Task:** [CDD-XXX] Nome da Task
+- **Task:** CDD-XXX Nome da Task
 - **Relacionado a:** Setup de ambiente / Correção de Bug / Nova Feature
 
 ## 📄 Resumo das Mudanças

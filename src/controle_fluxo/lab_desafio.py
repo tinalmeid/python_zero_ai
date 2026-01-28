@@ -35,7 +35,6 @@ def filtrar_dados_sujos(texto_baguncado: str) -> tuple:
         else:
             # Ignora outros caracteres especiais
             print(f"⚠️ Ignorando caractere não alfanumérico: {caractere}")
-            continue
 
     # Join junta a lista em uma string única
     print(f"🔢 Números encontrados: {''.join(numeros)}")

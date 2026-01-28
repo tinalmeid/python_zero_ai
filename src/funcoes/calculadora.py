@@ -34,7 +34,7 @@ def classificar_imc(imc: float) -> str:
     Returns:
         str: A categoria do IMC.
     """
-    if imc == 0.0:
+    if imc <= 0.0:
         return "IMC Inválido"
     elif imc < 18.5:
         return "Abaixo do Peso"

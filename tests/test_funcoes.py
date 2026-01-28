@@ -68,4 +68,5 @@ def test_classificar_imc():
     assert classificar_imc(27.0) == "Sobrepeso"
     assert classificar_imc(32.0) == "Obesidade"
     assert classificar_imc(0.0) == "IMC Inválido"
+    assert classificar_imc(-5.0) == "IMC Inválido"
 

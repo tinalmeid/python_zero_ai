@@ -122,13 +122,18 @@ Para manter a qualidade e a rastreabilidade do projeto, seguimos estritamente:
         |----------------------------------------------------------------------------------|
         |src\controle_fluxo\aula_estruturas.py      30      0      100%              ✅
         |src\controle_fluxo\lab_desafio.py          12      0      100%              ✅
+        |src\estrutura_dados\analise_avancada.py    10      0      100%              ✅
+        |src\estrutura_dados\dicionarios_sets.py     6      0      100%              ✅
+        |src\estrutura_dados\fila_processamento.py   9      0      100%              ✅
+        |src\estrutura_dados\listas_tuplas.py       11      0      100%              ✅
         |src\funcoes\aula_funcoes.py                12      0      100%              ✅
         |src\funcoes\calculadora.py                 14      0      100%              ✅
         |src\poo_fundamentos\agregacao.py           11      0      100%              ✅
         |src\poo_fundamentos\sistema_escola.py      31      0      100%              ✅
         |src\setup_inicial\setup_inicial.py         24      0      100%              ✅
-        |----------------------------------------------------------------------------------|
-        | TOTAL                                     134     0      100%              ✅
+        |src\tratamento-de-erros\gerenciador        24      0      100%              ✅
+        ----------------------------------------------------------------------------------|
+        | TOTAL                                     194     0      100%              ✅
         🔢 Stmts (Statements) : Linhas executáveis
         ❌ Miss (Missed) : Linhas que o teste não conseguiu cobrir
         🎯 Cover (Coverage) : Porcentagem de cobertura
@@ -173,9 +178,8 @@ python_zero_a_ai/
 |   |   ├── 📜 listas_tuplas.py         (Sequências e Imutabilidade)
 |   |   ├── 🔑 dicionarios_sets.py      (Chave-Valor e Unicidade)
 |   │   └── ⚙️ fila_processamento.py    (Algoritmo de Priorização)
-|   ├──                            # 🛡️ Tratamento de Exceções
-|   |   ├──
-|   │   └──
+|   ├── tratamentos_erros          # 🛡️ Tratamento de Exceções
+|   │   └── 💊gerenciador.py            (Try, Except, Finally)
 |   ├──                            # 🏭 Classes, Construtores e Métodos
 |   |   ├──
 |   │   └──
@@ -188,6 +192,7 @@ python_zero_a_ai/
 ├── tests/                         # 🧪 Testes Unitários (Pytest)
 │   ├── 🩺 test_controle_fluxo.py
 │   ├── 🩺 test_estrutura.py
+│   ├── 🩺 test_excecoes.py
 |   ├── 🩺 test_funcoes.py
 |   ├── 🩺 test_poo_fundamentos.py
 │   └── 🩺 test_setup.py
@@ -207,8 +212,8 @@ Monitoramento de tarefas de desenvolvimento com base no fluxo de trabalho de Eng
 | **CDD-6**   | 🔀 Estruturas de Controle (If, For, While)              | CDD-6-feat/loops-e-condicionais  | ✅ Concluído    |
 | **CDD-7**   | 🧬 Programação Orientada a Objetos (Classes e Herança)  | CDD-7-feat/poo-fundamentos       | ✅ Concluído    |
 | **CDD-8**   | 🧩 Funções, Argumentos Dinâmicos e Módulos              | CDD-8-feat/funcoes-e-modulos     | ✅ Concluído    |
-| **CDD-9**   | 🗃️ Estruturas de Dados (Listas, Sets, Dicts) e Lambda   | CDD-9-feat/estruturas-de-dados   | 🔄 Em Andamento |
-| **CDD-10**  | 🛡️ Tratamento de Exceções (Try, Except, Finally)        | CDD-10-feat/tratamento-de-erros  | 📝 A Fazer      |
+| **CDD-9**   | 🗃️ Estruturas de Dados (Listas, Sets, Dicts) e Lambda   | CDD-9-feat/estruturas-de-dados   | ✅ Concluído    |
+| **CDD-10**  | 🛡️ Tratamento de Exceções (Try, Except, Finally)        | CDD-10-feat/tratamento-de-erros  | 🔄 Em Andamento |
 | **CDD-11**  | 🏭 Classes, Construtores e Métodos (OOP)                | CDD-11-feat/poo-classes-objetos  | 📝 A Fazer      |
 | **CDD-12**  | 📦 Modularização, Imports e Packages                    | CDD-12-feat/modulos-e-pacotes    | 📝 A Fazer      |
 > **Legenda:** ✅ Concluído | 🔄 Em Andamento | 📝 A Fazer

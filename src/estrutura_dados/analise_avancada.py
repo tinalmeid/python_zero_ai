@@ -1,5 +1,5 @@
 """
-Docstring for the 'analise_avancada' module.
+Docstring do arquivo analise_avancada.py
 Descrição: Este módulo contém exemplos e explicações sobre análise avançada de dados utilizando estruturas de dados em Python.
 Usaremos List Comprehensions, Lambda, Map, Filter.
 

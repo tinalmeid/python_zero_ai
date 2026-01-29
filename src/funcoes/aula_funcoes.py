@@ -1,5 +1,5 @@
 """
-Docstring do módulo funcoes.py
+Docstring do arquivo aula_funcoes.py
 Descrição: Este módulo implementa funções simples, argumentos padrão e *args em Python.
 
 Autora: Tina Almeida

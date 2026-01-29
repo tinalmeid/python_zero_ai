@@ -1,5 +1,5 @@
 """
-Docstring do módulo sistema_escola.py
+Docstring do arquivo sistema_escola.py
 Descrição: Este módulo implementa exemplos de Herança, Polimorfismo e uso  de super() em Python,
 dentro do contexto de um sistema escolar.
 

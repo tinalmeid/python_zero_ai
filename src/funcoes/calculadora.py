@@ -1,5 +1,5 @@
 """
-Docstring do módulo funcoes.
+Docstring do arquivo calculadora.py
 Descrição: Este módulo implementa exemplo de como importar módulos em Python. (No arquivo test_funcoes.py)
 
 Autora: Tina Almeida

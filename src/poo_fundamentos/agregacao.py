@@ -1,5 +1,5 @@
 """
-Docstring do módulo sistema_escola.py
+Docstring do arquivo agregacao.py
 Descrição: Este módulo implementa exemplo de agregação em Python,
 dentro do contexto de carros e motores.
 

@@ -1,5 +1,5 @@
 """
-Docstring para src.setup_inicial.setup_inicial
+Docstring do arquivo setup_inicial.py
 Descrição: Este módulo pode conter funções e classes relacionadas à configuração inicial do projeto.
 Servindo como ponto de partida para outras funcionalidades.
 

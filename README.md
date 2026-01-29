@@ -133,8 +133,10 @@ Para manter a qualidade e a rastreabilidade do projeto, seguimos estritamente:
         |src\poo_fundamentos\sistema_escola.py      31      0      100%              ✅
         |src\setup_inicial\setup_inicial.py         24      0      100%              ✅
         |src\tratamento-de-erros\gerenciador        24      0      100%              ✅
+        |src\estatistica\estatistica.py              7      0      100%              ✅
+        |src\estatistica\main.py                    20      0      100%              ✅
         ----------------------------------------------------------------------------------|
-        | TOTAL                                     207     0      100%              ✅
+        | TOTAL                                     234     0      100%              ✅
         🔢 Stmts (Statements) : Linhas executáveis
         ❌ Miss (Missed) : Linhas que o teste não conseguiu cobrir
         🎯 Cover (Coverage) : Porcentagem de cobertura
@@ -181,16 +183,13 @@ python_zero_a_ai/
 |   │   └── ⚙️ fila_processamento.py    (Algoritmo de Priorização)
 |   ├── tratamentos_erros          # 🛡️ Tratamento de Exceções
 |   │   └── 💊 gerenciador.py           (Try, Except, Finally)
-|   ├── orientacao_objetos         # 🏭 Classes, Construtores e Métodos
+|   ├── orientacao_objetos         # 🏭 Classes, Construtores e Métodos  (OOP)
 |   │   └── 👷🏾funcionario.py            (Classe e Objetos)
-|   ├──                            # 🏭 Classes, Construtores e Métodos (OOP)
-|   |   ├──
-|   │   └──
-|   ├──                            # 📦 Modularização, Imports e Package
-|   |   ├──
-|   │   └──
+|   ├── estatistica                # 📦 Modularização, Imports e Package
+|   │   └──📊 basica.py                (Módulos, importação e pacotes)
 ├── tests/                         # 🧪 Testes Unitários (Pytest)
 │   ├── 🩺 test_controle_fluxo.py
+│   ├── 🩺 test_estatistica.py
 │   ├── 🩺 test_estrutura.py
 │   ├── 🩺 test_excecoes.py
 |   ├── 🩺 test_funcoes.py
@@ -215,8 +214,8 @@ Monitoramento de tarefas de desenvolvimento com base no fluxo de trabalho de Eng
 | **CDD-8**   | 🧩 Funções, Argumentos Dinâmicos e Módulos              | CDD-8-feat/funcoes-e-modulos     | ✅ Concluído    |
 | **CDD-9**   | 🗃️ Estruturas de Dados (Listas, Sets, Dicts) e Lambda   | CDD-9-feat/estruturas-de-dados   | ✅ Concluído    |
 | **CDD-10**  | 🛡️ Tratamento de Exceções (Try, Except, Finally)        | CDD-10-feat/tratamento-de-erros  | ✅ Concluído    |
-| **CDD-11**  | 🏭 Classes, Construtores e Métodos (OOP)                | CDD-11-feat/poo-classes-objetos  | 🔄 Em Andamento |
-| **CDD-12**  | 📦 Modularização, Imports e Packages                    | CDD-12-feat/modulos-e-pacotes    | 📝 A Fazer      |
+| **CDD-11**  | 🏭 Classes, Construtores e Métodos (OOP)                | CDD-11-feat/poo-classes-objetos  | ✅ Concluído    |
+| **CDD-12**  | 📦 Modularização, Imports e Packages                    | CDD-12-feat/modulos-e-pacotes    | 🔄 Em Andamento |
 > **Legenda:** ✅ Concluído | 🔄 Em Andamento | 📝 A Fazer
 
 ## 📄 Licença

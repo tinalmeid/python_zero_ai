@@ -33,3 +33,7 @@ exclude_lines =
     # Abstract methods
     @abstractmethod
     @abstract
+
+[coverage:run]
+omit =
+    src/projetos/executar_ponto_steak.py

@@ -37,7 +37,6 @@ def test_ponto_steak(temperatura, esperado):
     (70, "🥩 Ao ponto para bem"),
     (71, "🥩 Bem passado"),
     (72, "🥩 Passou do ponto"),
-
 ])
 def test_ponto_steak_bordas(temperatura, esperado_borda):
    # Testa valores de borda

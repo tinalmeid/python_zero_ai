@@ -38,3 +38,11 @@ exclude_lines =
 omit =
     src/projetos/executar_ponto_steak.py
     src/projetos/executar_calculadora_tinta.py
+    src/__init__.py
+    src/projetos/__init__.py
+    src/estatistica/__init__.py
+    src/controle_fluxo/__init__.py
+    src/estrutura_dados/__init__.py
+    src/funcoes/__init__.py
+    src/setup_inicial/__init__.py
+    src\tratamentos_erros\__init__.py

@@ -41,7 +41,7 @@ def executar_calculadora_tinta():
         print(f"📐 A área da parede é: {area} m²")
     print(" ")
 
-    rendimento_litro = obter_valor_float("➡️  Informe o rendimento da tinta (m² por litro): ")
+    rendimento_litro = obter_valor_float("➡️  Informe o rendimento da lata de tinta (m² por litro): ")
     if rendimento_litro is None:
         print("🚫 Rendimento por litro não podem ser None.")
         return
@@ -57,7 +57,7 @@ def executar_calculadora_tinta():
         print("🚫 A quantidade de tinta necessária é zero. Verifique os valores informados.")
         return
     else:
-        print(f"🖌️ Quantidade de tinta necessária: {tinta_necessaria:.2f} litros")
+        print(f"🖌️ Quantidade lata(s) necessária(s): {tinta_necessaria:.2f}")
 
     print("\n" + "="*40)
     print("🏁 FIM DA CALCULADORA DE TINTA")

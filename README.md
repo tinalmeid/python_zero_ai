@@ -132,12 +132,14 @@ Para manter a qualidade e a rastreabilidade do projeto, seguimos estritamente:
         |src\poo_fundamentos\agregacao.py           11      0      100%              ✅
         |src\poo_fundamentos\sistema_escola.py      31      0      100%              ✅
         |src\projetos\ponto_steak.py                20      0      100%              ✅
+        |src\projetos\calculo_area_parede.py        32      0      100%              ✅
+        |src\projetos\funcionarios_carro_sets.py    20      0      100%              ✅
         |src\setup_inicial\setup_inicial.py         24      0      100%              ✅
         |src\tratamento-de-erros\gerenciador        24      0      100%              ✅
         |src\estatistica\estatistica.py              7      0      100%              ✅
         |src\estatistica\main.py                    20      0      100%              ✅
         ----------------------------------------------------------------------------------|
-        | TOTAL                                     255     0      100%              ✅
+        | TOTAL                                     306     0      100%              ✅
         🔢 Stmts (Statements) : Linhas executáveis
         ❌ Miss (Missed) : Linhas que o teste não conseguiu cobrir
         🎯 Cover (Coverage) : Porcentagem de cobertura
@@ -159,41 +161,41 @@ Para manter a qualidade e a rastreabilidade do projeto, seguimos estritamente:
 ```
 python_zero_a_ai/
 ├── .github/
-│   ├── workflows/                 # 🤖 Automação (GitHub Actions)
-|   └── PULL_REQUEST_TEMPLATE.md   # 📋 Template de Descrição Automática
-├── docs/                          # 📘 Documentação de Padrões
-│   ├── PADROES_GIT.md             # 🔀 Processos (Review, Merge)
-│   ├── SOLID.md                   # 🧱 Arquitetura (SRP)
-│   └── CLEAN_CODE.md              # 🧹 Estilo (Nomes, Docs)
-├── src/                           # 🧠 Código Fonte (Módulos do Curso)
+│   ├── workflows/                          # 🤖 Automação (GitHub Actions)
+|   └── PULL_REQUEST_TEMPLATE.md            # 📋 Template de Descrição Automática
+├── docs/                                   # 📘 Documentação de Padrões
+│   ├── PADROES_GIT.md                      # 🔀 Processos (Review, Merge)
+│   ├── SOLID.md                            # 🧱 Arquitetura (SRP)
+│   └── CLEAN_CODE.md                       # 🧹 Estilo (Nomes, Docs)
+├── src/                                    # 🧠 Código Fonte (Módulos do Curso)
 │   ├── __init__.py
-│   ├── setup_inicial/             # 🏗️ Módulo 01: Setup e Boas Práticas
+│   ├── setup_inicial/                      # 🏗️ Módulo 01: Setup e Boas Práticas
 │   │   └── 🐍 setup_inicial.py
-|   ├── controle_fluxo/            # 🔀 Módulo 02: Lógica de Programação
-│   │   ├── 📘 aula_estruturas.py       (If, For, While)
-│   │   └── 🧩 lab_desafio.py           (Algoritmo de Separação)
-|   ├── poo-fundamentos/           # 🧬 Módulo 03: Orientação a Objetos
-|   │   ├── 🏫 sistema_escola.py        (Herança e Polimorfismo)
-|   │   └── 🚗 agregacao.py             (Relação entre Objetos)
-|   ├── funcoes                    # 🧩 Módulo 04: Funções e Modularização
-|   |   ├── 🛠️ aula_funcoes.py          (Def, Return, *Args)
-|   │   └── 🧮 calculadora.py           (Módulo de cálculos para importação)
-|   ├── estrutura_dados            # 🗃️ Estruturas de Dados
-|   |   ├── 📜 listas_tuplas.py         (Sequências e Imutabilidade)
-|   |   ├── 🔑 dicionarios_sets.py      (Chave-Valor e Unicidade)
-|   │   └── ⚙️ fila_processamento.py    (Algoritmo de Priorização)
-|   ├── tratamentos_erros          # 🛡️ Tratamento de Exceções
-|   │   └── 💊 gerenciador.py           (Try, Except, Finally)
-|   ├── orientacao_objetos         # 🏭 Classes, Construtores e Métodos  (OOP)
-|   │   └── 👷🏾funcionario.py            (Classe e Objetos)
-|   ├── estatistica                # 📦 Modularização, Imports e Package
-|   │   └─ 📊 basica.py                (Módulos, importação e pacotes)
-|   ├── projetos                   # 🫥 Desafios de Lógica
-|   |   ├── 🥩 ponto_steak.py          (Informa o Ponto da carne de acordo com a temperatura informada)
-|   |   ├── 🎨 calculadora_tinta.py
-|   |   ├── 🏭 rh_empresa.py
+|   ├── controle_fluxo/                     # 🔀 Módulo 02: Lógica de Programação
+│   │   ├── 📘 aula_estruturas.py          (If, For, While)
+│   │   └── 🧩 lab_desafio.py              (Algoritmo de Separação)
+|   ├── poo-fundamentos/                    # 🧬 Módulo 03: Orientação a Objetos
+|   │   ├── 🏫 sistema_escola.py           (Herança e Polimorfismo)
+|   │   └── 🚗 agregacao.py                (Relação entre Objetos)
+|   ├── funcoes                             # 🧩 Módulo 04: Funções e Modularização
+|   |   ├── 🛠️ aula_funcoes.py             (Def, Return, *Args)
+|   │   └── 🧮 calculadora.py              (Módulo de cálculos para importação)
+|   ├── estrutura_dados                     # 🗃️ Estruturas de Dados
+|   |   ├── 📜 listas_tuplas.py            (Sequências e Imutabilidade)
+|   |   ├── 🔑 dicionarios_sets.py         (Chave-Valor e Unicidade)
+|   │   └── ⚙️ fila_processamento.py       (Algoritmo de Priorização)
+|   ├── tratamentos_erros                   # 🛡️ Tratamento de Exceções
+|   │   └── 💊 gerenciador.py              (Try, Except, Finally)
+|   ├── orientacao_objetos                  # 🏭 Classes, Construtores e Métodos  (OOP)
+|   │   └── 👷🏾funcionario.py               (Classe e Objetos)
+|   ├── estatistica                         # 📦 Modularização, Imports e Package
+|   │   └─ 📊 basica.py                    (Módulos, importação e pacotes)
+|   ├── projetos                            # 🫥 Desafios de Lógica
+|   |   ├── 🥩 ponto_steak.py              (Calcula o Ponto da carne de acordo com a temperatura informada)
+|   |   ├── 🎨 calculadora_area_parede.py  (Calcula a área de acordo com a hxl, calcula a quantidade de lata como rendimento da tinta)
+|   |   ├── 🏭 func_carro_sets.py          ( Sets de funcionários: Não tem carro, tem e trabalha a noite e tem e trabalha de dia)
 |   │   └── 📏 calculo_imc.py
-├── tests/                         # 🧪 Testes Unitários (Pytest)
+├── tests/                                  # 🧪 Testes Unitários (Pytest)
 │   ├── 🩺 test_controle_fluxo.py
 │   ├── 🩺 test_estatistica.py
 │   ├── 🩺 test_estrutura.py
@@ -202,6 +204,7 @@ python_zero_a_ai/
 |   ├── 🩺 test_ponto_steak.py
 |   ├── 🩺 test_poo_basico.py
 |   ├── 🩺 test_poo_fundamentos.py
+|   ├── 🩺 test_rendimento_tinta.py
 │   └── 🩺 test_setup.py
 ├── .gitignore                     # 🙈 Arquivos ignorados pelo Git
 ├── README.md                      # 📘 Documentação do Projeto

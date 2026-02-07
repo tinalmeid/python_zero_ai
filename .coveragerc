@@ -39,6 +39,7 @@ omit =
     src/projetos/executar_ponto_steak.py
     src/projetos/executar_calculadora_tinta.py
     src/projetos/executar_calculo_imc.py
+    src/projetos/executar_lista_frutas.py
     src/__init__.py
     src/projetos/__init__.py
     src/estatistica/__init__.py
@@ -46,4 +47,4 @@ omit =
     src/estrutura_dados/__init__.py
     src/funcoes/__init__.py
     src/setup_inicial/__init__.py
-    src\tratamentos_erros\__init__.py
+    src/tratamentos_erros/__init__.py

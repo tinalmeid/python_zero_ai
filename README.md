@@ -135,6 +135,7 @@ Para manter a qualidade e a rastreabilidade do projeto, seguimos estritamente:
         |src\projetos\calculo_area_parede.py        32      0      100%              ✅
         |src\projetos\funcionarios_carro_sets.py    20      0      100%              ✅
         |src\projetos\calculo_imc.py                29      0      100%              ✅
+        |src\projetos\analisa_lista_frutas.py       30      0      100%              ✅
         |src\setup_inicial\setup_inicial.py         24      0      100%              ✅
         |src\tratamento-de-erros\gerenciador        24      0      100%              ✅
         |src\estatistica\estatistica.py              7      0      100%              ✅
@@ -194,8 +195,9 @@ python_zero_a_ai/
 |   ├── projetos                            # 🫥 Desafios de Lógica
 |   |   ├── 🥩 ponto_steak.py              (Calcula o Ponto da carne de acordo com a temperatura informada)
 |   |   ├── 🎨 calculadora_area_parede.py  (Calcula a área de acordo com a hxl, calcula a quantidade de lata como rendimento da tinta)
-|   |   ├── 🏭 func_carro_sets.py          ( Sets de funcionários: Não tem carro, tem e trabalha a noite e tem e trabalha de dia)
-|   │   └── 📏 calculo_imc.py
+|   |   ├── 🏭 func_carro_sets.py          (Sets de funcionários: Não tem carro, tem e trabalha a noite e tem e trabalha de dia)
+|   |   ├── 📏 calculo_imc.py              (Realiza calculo IMC de acordo com peso e altura do usuário)
+|   |   ├── 📋 analisa_lista_frutas        (Cria uma lista com 6 itens de frutas e gerencia CRUD)
 ├── tests/                                  # 🧪 Testes Unitários (Pytest)
 │   ├── 🩺 test_controle_fluxo.py
 │   ├── 🩺 test_estatistica.py
@@ -206,7 +208,8 @@ python_zero_a_ai/
 |   ├── 🩺 test_poo_basico.py
 |   ├── 🩺 test_poo_fundamentos.py
 |   ├── 🩺 test_rendimento_tinta.py
-│   └── 🩺 test_setup.py
+|   ├── 🩺 test_setup.py
+|   ├── 🩺 test_lista_frutas.py
 ├── .gitignore                     # 🙈 Arquivos ignorados pelo Git
 ├── README.md                      # 📘 Documentação do Projeto
 ├── requirements.txt               # 📦 Lista de Dependências
@@ -228,6 +231,7 @@ Monitoramento de tarefas de desenvolvimento com base no fluxo de trabalho de Eng
 | **CDD-11**  | 🏭 Classes, Construtores e Métodos (OOP)                | CDD-11-feat/poo-classes-objetos  | ✅ Concluído    |
 | **CDD-12**  | 📦 Modularização, Imports e Packages                    | CDD-12-feat/modulos-e-pacotes    | ✅ Concluído    |
 | **CDD-13**  | 🫥 Desafios: Ponto do Steak, Calculadora e mais..       | CDD-13-projetos/desafios         | ✅ Concluído    |
+| **CDD-14**  | 🫥 Desafios: Gerenciador de lista de frutas             | CDD-14-feat/manipulacao-listas   | 🔄 Em Andamento |
 > **Legenda:** ✅ Concluído | 🔄 Em Andamento | 📝 A Fazer
 
 ## 📄 Licença

@@ -63,5 +63,8 @@ def executar_lista_frutas():
     print("🏁 FIM DO PROJETO PONTO DO STEAK")
     print(" ")
 
+#===== Execução Do Script ====
 if __name__ == "__main__":
     executar_lista_frutas()
+
+# Fim do arquivo src/projetos/executar_lista_frutas.py

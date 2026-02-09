@@ -37,7 +37,8 @@ def executar_calculo_imc():
     print("🏁 FIM DO PROJETO CÁLCULO DE IMC")
     print(" ")
 
-
-
+#===== Execução Do Script ====
 if __name__ == "__main__":
     executar_calculo_imc()
+
+# Fim do arquivo src/projetos/executar_calculo_imc.py

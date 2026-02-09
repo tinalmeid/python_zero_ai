@@ -40,6 +40,7 @@ omit =
     src/projetos/executar_calculadora_tinta.py
     src/projetos/executar_calculo_imc.py
     src/projetos/executar_lista_frutas.py
+    src/projetos/executar_sistema_seguranca.py
     src/__init__.py
     src/projetos/__init__.py
     src/estatistica/__init__.py

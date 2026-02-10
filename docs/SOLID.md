@@ -9,13 +9,16 @@ Guia de referência dos princípios de arquitetura utilizados no projeto.
 > *"Uma classe ou função deve ter um, e apenas um, motivo para mudar."*
 
 ### 💡 O Conceito
+
 Imagine um **Canivete Suíço** vs. um **Bisturi**.
+
 * O canivete faz tudo (corta, abre vinho, lixa), mas não faz nada com excelência e é difícil de manusear.
 * O bisturi faz apenas uma coisa (cortar), mas faz com precisão absoluta.
 
 No código, queremos **Bisturis**. Cada função deve resolver apenas um problema pequeno.
 
 ### ❌ Como NÃO fazer (Violação do SRP)
+
 Uma função "Faz Tudo". Se a regra de e-mail mudar, você mexe nela. Se o banco de dados mudar, você mexe nela também. Isso gera bugs.
 
 ```python
@@ -30,6 +33,7 @@ def registrar_host(nome):
 ```
 
 ### ✅ Como FAZER (Aplicando SRP)
+
 Quebramos em pequenas funções especialistas.
 
 ```python

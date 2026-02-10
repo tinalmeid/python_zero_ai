@@ -1,4 +1,4 @@
-# 📝Padrão Jira
+# 📝 Padrão Jira
 
 ## 🎯 Objetivo
 

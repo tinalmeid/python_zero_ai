@@ -37,3 +37,5 @@ def executar_estados_brasil():
 #====== Execução Do Script ======
 if __name__ == "__main__":
     executar_estados_brasil()
+
+# Fim do arquivo src.projetos.executar_estados_brasil.py

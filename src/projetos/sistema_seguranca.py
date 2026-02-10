@@ -249,3 +249,4 @@ def robo_varredura():
                 print(mensagens[(andar, sala)])
     print("Varredura das câmeras concluída. Status atualizado para todas as salas.")
 
+# Fim do arquivo src.projetos.sistema_seguranca.py

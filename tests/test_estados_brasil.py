@@ -91,3 +91,5 @@ def test_analisar_viagens_vazios():
     assert len(resultados["diferenca_usuario1"]) == 4
     assert len(resultados["diferenca_usuario2"]) == 4
     assert len(resultados["uniao"]) == 10
+
+# Fim do arquivo tests.test_estados_brasil.py

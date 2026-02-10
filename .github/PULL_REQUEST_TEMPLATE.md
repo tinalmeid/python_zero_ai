@@ -21,8 +21,7 @@ Este PR introduz [descreva a mudança principal, ex: a estrutura inicial do proj
 
 ## 📸 Evidências & Testes
 
-**Status dos Testes:**
-Tests passed: 100%
+**Status dos Testes:** Tests passed: 100%
 
 **Quality Gate (Sonar):**
 

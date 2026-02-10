@@ -103,3 +103,13 @@ snapshots/
 #====================================
 # Arquivos de banco de dados locais.
 *.db
+
+#====================================
+# 11. Notebooks e Dados
+#====================================
+# Arquivos de notebooks e dados que não devem ser versionados.
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/*
+dados/
+*.csv
+*.xlsx

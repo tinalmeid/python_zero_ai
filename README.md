@@ -43,6 +43,13 @@ Udemy: [Introdução à linguagem Python](https://www.udemy.com/course/programac
 - Python 3.8 or higher
 - pip (Python package manager)
 
+     **VS Code** (Recomendado com extensões Python e Jupyter)
+
+    **Bibliotecas de Data Science:**
+        `pandas` (Manipulação de dados)
+        `matplotlib` (Visualização de dados)
+        `jupyter` (Para rodar os notebooks)
+
 ### Instalação
 
 1. 📥**Clone o repositório:**
@@ -168,8 +175,12 @@ python_zero_a_ai/
 |   └── PULL_REQUEST_TEMPLATE.md            # 📋 Template de Descrição Automática
 ├── docs/                                   # 📘 Documentação de Padrões
 │   ├── PADROES_GIT.md                      # 🔀 Processos (Review, Merge)
+│   ├── PADROES_JIRA.md                     # 📝 DOD (O "Definition of Done")
 │   ├── SOLID.md                            # 🧱 Arquitetura (SRP)
 │   └── CLEAN_CODE.md                       # 🧹 Estilo (Nomes, Docs)
+├── notebooks/                              # 📊 Roadmap de Ciência de Dados
+│   ├──                                     #
+│   └──                                     #
 ├── src/                                    # 🧠 Código Fonte (Módulos do Curso)
 │   ├── __init__.py
 │   ├── setup_inicial/                      # 🏗️ Módulo 01: Setup e Boas Práticas
@@ -192,7 +203,7 @@ python_zero_a_ai/
 |   ├── orientacao_objetos                  # 🏭 Classes, Construtores e Métodos  (OOP)
 |   │   └── 👷🏾funcionario.py               (Classe e Objetos)
 |   ├── estatistica                         # 📦 Modularização, Imports e Package
-|   │   └─ 📊 basica.py                    (Módulos, importação e pacotes)
+|   │   └── 📊 basica.py                    (Módulos, importação e pacotes)
 |   ├── projetos                            # 🫥 Desafios de Lógica
 |   |   ├── 🥩 ponto_steak.py              (Calcula o Ponto da carne de acordo com a temperatura informada)
 |   |   ├── 🎨 calculadora_area_parede.py  (Calcula a área de acordo com a hxl, calcula a quantidade de lata como rendimento da tinta)
@@ -201,7 +212,7 @@ python_zero_a_ai/
 |   |   ├── 📋 analisa_lista_frutas        (Cria uma lista com 6 itens de frutas e gerencia CRUD)
 |   |   ├── 🔐 sistema_seguranca           (Lógica de portão eletrônico usando while, break e continue)
 |   |   ├── 🇧🇷  estados_brasil              (Lógica para consultar as capitais dos estados do Brasil)
-|   |   ├── 🧮 calculadora_math            (Lógica funções matemáticas: Recursividade, fatorial, exponencial, lambda de cubo, multiplicação ...)
+|   |   └── 🧮 calculadora_math            (Lógica funções matemáticas: Recursividade, fatorial, exponencial, lambda de cubo, multiplicação ...)
 ├── tests/                                  # 🧪 Testes Unitários (Pytest)
 │   ├── 🩺 test_controle_fluxo.py
 │   ├── 🩺 test_estatistica.py
@@ -216,7 +227,7 @@ python_zero_a_ai/
 |   ├── 🩺 test_lista_frutas.py
 |   ├── 🩺 test_sistema_seguranca.py
 |   ├── 🩺 test_estados_brasil.py
-|   ├── 🩺 test_calculadora_math.py
+|   └── 🩺 test_calculadora_math.py
 ├── .gitignore                             # 🙈 Arquivos ignorados pelo Git
 ├── README.md                              # 📘 Documentação do Projeto
 ├── requirements.txt                       # 📦 Lista de Dependências
@@ -227,23 +238,28 @@ python_zero_a_ai/
 
 Monitoramento de tarefas de desenvolvimento com base no fluxo de trabalho de Engenharia.
 
-| ID Jira     | 📚 Módulo / Tarefa                                      | Branch                                     | Status          |
-| :---------- | :-------------------------------------------------------| :-------------------------------------- --- | :---------------|
-| **CDD-5**   | 🏗️ Setup: Ambiente, CI/CD e Quality Gate                | CDD-5-chore/setup-ambiente                 | ✅ Concluído    |
-| **CDD-6**   | 🔀 Estruturas de Controle (If, For, While)              | CDD-6-feat/loops-e-condicionais            | ✅ Concluído    |
-| **CDD-7**   | 🧬 Programação Orientada a Objetos (Classes e Herança)  | CDD-7-feat/poo-fundamentos                 | ✅ Concluído    |
-| **CDD-8**   | 🧩 Funções, Argumentos Dinâmicos e Módulos              | CDD-8-feat/funcoes-e-modulos               | ✅ Concluído    |
-| **CDD-9**   | 🗃️ Estruturas de Dados (Listas, Sets, Dicts) e Lambda   | CDD-9-feat/estruturas-de-dados             | ✅ Concluído    |
-| **CDD-10**  | 🛡️ Tratamento de Exceções (Try, Except, Finally)        | CDD-10-feat/tratamento-de-erros            | ✅ Concluído    |
-| **CDD-11**  | 🏭 Classes, Construtores e Métodos (OOP)                | CDD-11-feat/poo-classes-objetos            | ✅ Concluído    |
-| **CDD-12**  | 📦 Modularização, Imports e Packages                    | CDD-12-feat/modulos-e-pacotes              | ✅ Concluído    |
-| **CDD-13**  | 🫥 Desafios: Ponto do Steak, Calculadora e mais..       | CDD-13-projetos/desafios                   | ✅ Concluído    |
-| **CDD-14**  | 🫥 Desafios: Gerenciador de lista de frutas             | CDD-14-feat/manipulacao-listas             | ✅ Concluído    |
-| **CDD-15**  | 🫥 Desafios: Sistema de Segurança                       | CDD-15-feat/sistema-seguranca-loops        | ✅ Concluído    |
-| **CDD-16**  | 🫥 Desafios: Sistema de Geografia de viagens            | CDD-16-feat/dicionarios-sets-estados       | ✅ Concluído    |
-| **CDD-17**  | 🫥 Desafios: Calculadora Math                           | CDD-17-feat/calculadora-funcoes-avancadas  | ✅ Concluído    |
+| ID Jira | 📚 Módulo / Tarefa | Branch | Status |
+| :--- | :--- | :--- | :--- |
+| **CDD-5** | 🏗️ Setup: Ambiente, CI/CD e Quality Gate | `CDD-5-chore/setup-ambiente` | ✅ Concluído |
+| **CDD-6** | 🔀 Estruturas de Controle (If, For, While) | `CDD-6-feat/loops-e-condicionais` | ✅ Concluído |
+| **CDD-7** | 🧬 POO: Classes e Herança | `CDD-7-feat/poo-fundamentos` | ✅ Concluído |
+| **CDD-8** | 🧩 Funções, Args Dinâmicos e Módulos | `CDD-8-feat/funcoes-e-modulos` | ✅ Concluído |
+| **CDD-9** | 🗃️ Estruturas de Dados (Listas, Sets, Dicts) | `CDD-9-feat/estruturas-de-dados` | ✅ Concluído |
+| **CDD-10** | 🛡️ Tratamento de Exceções (Try, Except) | `CDD-10-feat/tratamento-de-erros` | ✅ Concluído |
+| **CDD-11** | 🏭 Classes, Construtores e Métodos (OOP) | `CDD-11-feat/poo-classes-objetos` | ✅ Concluído |
+| **CDD-12** | 📦 Modularização, Imports e Packages | `CDD-12-feat/modulos-e-pacotes` | ✅ Concluído |
+| **CDD-13** | 🫥 Desafios: Ponto do Steak, Calculadora... | `CDD-13-projetos/desafios` | ✅ Concluído |
+| **CDD-14** | 🫥 Desafios: Gerenciador de Frutas | `CDD-14-feat/manipulacao-listas` | ✅ Concluído |
+| **CDD-15** | 🫥 Desafios: Sistema de Segurança | `CDD-15-feat/sistema-seguranca-loops` | ✅ Concluído |
+| **CDD-16** | 🫥 Desafios: Geografia de Viagens | `CDD-16-feat/dicionarios-sets-estados` | ✅ Concluído |
+| **CDD-17** | 🧮 Desafios: Calculadora Math Avançada | `CDD-17-feat/calculadora-funcoes-avancadas` | ✅ Concluído |
+| **CDD-18** | 🐼 Data Science: Leitura (Pandas vs Python) | `CDD-18-feat/leitura-arquivos-pandas` | 🚧 Em Andamento |
+| **CDD-19** | 🧹 Data Science: Limpeza e Estatística (Real Estate) | `CDD-19-feat/limpeza-tratamento-dados` | 📅 Planejado |
+| **CDD-20** | ⚽ Data Science: Análise Exploratória (FIFA) | `CDD-20-feat/analise-exploratoria-fifa` | 📅 Planejado |
+| **CDD-21** | 📊 Data Viz I: Gráficos Fundamentais | `CDD-21-feat/visualizacao-basica` | 📅 Planejado |
+| **CDD-22** | 🎨 Data Viz II: Estatística e Estilização | `CDD-22-feat/visualizacao-avancada` | 📅 Planejado |
 
-> **Legenda:** ✅ Concluído | 🔄 Em Andamento | 📝 A Fazer
+> **Legenda:** ✅ Concluído | 🚧 Em Andamento | 📅 Planejado
 
 ## 📄 Licença
 

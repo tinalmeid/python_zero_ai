@@ -11,3 +11,9 @@ python-dotenv
 netmiko
 napalm
 boto3
+
+# --- Análise de Dados e Visualização (Ferramentas do projeto) ---
+pandas
+matplotlib
+seaborn
+numpy

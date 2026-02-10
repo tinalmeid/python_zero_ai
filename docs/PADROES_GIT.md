@@ -49,7 +49,7 @@ Próximas Vezes (Só atualizar): Como o vínculo já existe, basta rodar:
 git push
 ```
 
-### 5: Limpeza (Pós-Merge no GitHub)
+### 5. Limpeza (Pós-Merge no GitHub)
 
 Depois que seu PR for aprovado e mergeado na `main`, apague a branch velha para manter a casa limpa.
 
@@ -62,11 +62,11 @@ git push origin --delete CDD-5-chore/setup-ambiente # Apague a branch remota (no
 git checkout -b CDD-6-feat/loops-e-condicionais # Cria a nova branch de trabalho
 ```
 
-## 1. 🛡️ Auto Code Review (Checklist)
+## 2. 🛡️ Auto Code Review (Checklist)
 
 *Copie e cole este checklist no **primeiro comentário** do seu Pull Request logo após abri-lo. Isso confirma para o revisor que você garantiu a qualidade básica.*
 
-### Checklist de Qualidade (Cristina)
+### Checklist
 
 ```Text
 - [ ] **SOLID:** O código respeita o princípio de responsabilidade única (SRP)?
@@ -87,11 +87,11 @@ git checkout -b CDD-6-feat/loops-e-condicionais # Cria a nova branch de trabalho
 - [ ] **SonarCloud:** O Quality Gate passou (Verde ✅)?
 ```
 
-## 2. 🔀 Padrão de Merge (Squash & Merge)
+## 3. 🔀 Padrão de Merge (Squash & Merge)
 
 *Ao finalizar um PR no GitHub, utilize a opção **"Squash and Merge"** e edite a mensagem final seguindo este padrão.*
 
-### Estrutura do Título
+### 1. Estrutura do Título
 
 `[CDD-XXX] tipo(escopo): descrição curta e imperativa`
 
@@ -111,7 +111,7 @@ git checkout -b CDD-6-feat/loops-e-condicionais # Cria a nova branch de trabalho
 - `[CDD-16] fix(pandas): corrige erro de tipagem na coluna data`
 - `[CDD-765] docs(readme): adiciona badges de status e cobertura`
 
-### Estrutura do Corpo da Mensagem
+### 2. Estrutura do Corpo da Mensagem
 
 *Liste as alterações técnicas em tópicos e vincule a tarefa do Jira no final.*
 
@@ -125,3 +125,4 @@ Alterações realizadas:
 * Documenta padrões de projeto no README e docs/.
 
 Relacionado a: [CDD-586]
+```

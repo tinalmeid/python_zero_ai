@@ -130,6 +130,7 @@ Para manter a qualidade e a rastreabilidade do projeto, seguimos estritamente:
     |src\poo_fundamentos\agregacao.py           11      0      100%              ✅
     |src\poo_fundamentos\sistema_escola.py      31      0      100%              ✅
     |src\projetos\ponto_steak.py                20      0      100%              ✅
+    |src\projetos\calculadora_math.py           27      0      100%              ✅
     |src\projetos\calculo_area_parede.py        32      0      100%              ✅
     |src\projetos\funcionarios_carro_sets.py    20      0      100%              ✅
     |src\projetos\calculo_imc.py                29      0      100%              ✅
@@ -141,7 +142,7 @@ Para manter a qualidade e a rastreabilidade do projeto, seguimos estritamente:
     |src\estatistica\estatistica.py              7      0      100%              ✅
     |src\estatistica\main.py                    20      0      100%              ✅
     ----------------------------------------------------------------------------------|
-    | TOTAL                                    468      0      100%              ✅
+    | TOTAL                                    495      0      100%              ✅
     🔢 Stmts (Statements) : Linhas executáveis
     ❌ Miss (Missed) : Linhas que o teste não conseguiu cobrir
     🎯 Cover (Coverage) : Porcentagem de cobertura
@@ -200,6 +201,7 @@ python_zero_a_ai/
 |   |   ├── 📋 analisa_lista_frutas        (Cria uma lista com 6 itens de frutas e gerencia CRUD)
 |   |   ├── 🔐 sistema_seguranca           (Lógica de portão eletrônico usando while, break e continue)
 |   |   ├── 🇧🇷  estados_brasil              (Lógica para consultar as capitais dos estados do Brasil)
+|   |   ├── 🧮 calculadora_math            (Lógica funções matemáticas: Recursividade, fatorial, exponencial, lambda de cubo, multiplicação ...)
 ├── tests/                                  # 🧪 Testes Unitários (Pytest)
 │   ├── 🩺 test_controle_fluxo.py
 │   ├── 🩺 test_estatistica.py
@@ -214,6 +216,7 @@ python_zero_a_ai/
 |   ├── 🩺 test_lista_frutas.py
 |   ├── 🩺 test_sistema_seguranca.py
 |   ├── 🩺 test_estados_brasil.py
+|   ├── 🩺 test_calculadora_math.py
 ├── .gitignore                             # 🙈 Arquivos ignorados pelo Git
 ├── README.md                              # 📘 Documentação do Projeto
 ├── requirements.txt                       # 📦 Lista de Dependências
@@ -224,19 +227,21 @@ python_zero_a_ai/
 
 Monitoramento de tarefas de desenvolvimento com base no fluxo de trabalho de Engenharia.
 
-| ID Jira     | 📚 Módulo / Tarefa                                      | Branch                                | Status          |
-| :---------- | :-------------------------------------------------------| :------------------------------------ | :---------------|
-| **CDD-5**   | 🏗️ Setup: Ambiente, CI/CD e Quality Gate                | CDD-5-chore/setup-ambiente            | ✅ Concluído    |
-| **CDD-6**   | 🔀 Estruturas de Controle (If, For, While)              | CDD-6-feat/loops-e-condicionais       | ✅ Concluído    |
-| **CDD-7**   | 🧬 Programação Orientada a Objetos (Classes e Herança)  | CDD-7-feat/poo-fundamentos            | ✅ Concluído    |
-| **CDD-8**   | 🧩 Funções, Argumentos Dinâmicos e Módulos              | CDD-8-feat/funcoes-e-modulos          | ✅ Concluído    |
-| **CDD-9**   | 🗃️ Estruturas de Dados (Listas, Sets, Dicts) e Lambda   | CDD-9-feat/estruturas-de-dados        | ✅ Concluído    |
-| **CDD-10**  | 🛡️ Tratamento de Exceções (Try, Except, Finally)        | CDD-10-feat/tratamento-de-erros       | ✅ Concluído    |
-| **CDD-11**  | 🏭 Classes, Construtores e Métodos (OOP)                | CDD-11-feat/poo-classes-objetos       | ✅ Concluído    |
-| **CDD-12**  | 📦 Modularização, Imports e Packages                    | CDD-12-feat/modulos-e-pacotes         | ✅ Concluído    |
-| **CDD-13**  | 🫥 Desafios: Ponto do Steak, Calculadora e mais..       | CDD-13-projetos/desafios              | ✅ Concluído    |
-| **CDD-14**  | 🫥 Desafios: Gerenciador de lista de frutas             | CDD-14-feat/manipulacao-listas        | ✅ Concluído    |
-| **CDD-14**  | 🫥 Desafios: Sistema de Segurança                       | CDD-15-feat/sistema-seguranca-loops   | ✅ Concluído    |
+| ID Jira     | 📚 Módulo / Tarefa                                      | Branch                                     | Status          |
+| :---------- | :-------------------------------------------------------| :-------------------------------------- --- | :---------------|
+| **CDD-5**   | 🏗️ Setup: Ambiente, CI/CD e Quality Gate                | CDD-5-chore/setup-ambiente                 | ✅ Concluído    |
+| **CDD-6**   | 🔀 Estruturas de Controle (If, For, While)              | CDD-6-feat/loops-e-condicionais            | ✅ Concluído    |
+| **CDD-7**   | 🧬 Programação Orientada a Objetos (Classes e Herança)  | CDD-7-feat/poo-fundamentos                 | ✅ Concluído    |
+| **CDD-8**   | 🧩 Funções, Argumentos Dinâmicos e Módulos              | CDD-8-feat/funcoes-e-modulos               | ✅ Concluído    |
+| **CDD-9**   | 🗃️ Estruturas de Dados (Listas, Sets, Dicts) e Lambda   | CDD-9-feat/estruturas-de-dados             | ✅ Concluído    |
+| **CDD-10**  | 🛡️ Tratamento de Exceções (Try, Except, Finally)        | CDD-10-feat/tratamento-de-erros            | ✅ Concluído    |
+| **CDD-11**  | 🏭 Classes, Construtores e Métodos (OOP)                | CDD-11-feat/poo-classes-objetos            | ✅ Concluído    |
+| **CDD-12**  | 📦 Modularização, Imports e Packages                    | CDD-12-feat/modulos-e-pacotes              | ✅ Concluído    |
+| **CDD-13**  | 🫥 Desafios: Ponto do Steak, Calculadora e mais..       | CDD-13-projetos/desafios                   | ✅ Concluído    |
+| **CDD-14**  | 🫥 Desafios: Gerenciador de lista de frutas             | CDD-14-feat/manipulacao-listas             | ✅ Concluído    |
+| **CDD-15**  | 🫥 Desafios: Sistema de Segurança                       | CDD-15-feat/sistema-seguranca-loops        | ✅ Concluído    |
+| **CDD-16**  | 🫥 Desafios: Sistema de Geografia de viagens            | CDD-16-feat/dicionarios-sets-estados       | ✅ Concluído    |
+| **CDD-17**  | 🫥 Desafios: Calculadora Math                           | CDD-17-feat/calculadora-funcoes-avancadas  | ✅ Concluído    |
 
 > **Legenda:** ✅ Concluído | 🔄 Em Andamento | 📝 A Fazer
 

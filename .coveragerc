@@ -42,6 +42,7 @@ omit =
     src/projetos/executar_lista_frutas.py
     src/projetos/executar_sistema_seguranca.py
     src/projetos/executar_estados_brasil.py
+    src/projetos/executar_calculadora_math.py
     src/__init__.py
     src/projetos/__init__.py
     src/estatistica/__init__.py

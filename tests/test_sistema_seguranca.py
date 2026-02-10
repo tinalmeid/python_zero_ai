@@ -171,3 +171,4 @@ def test_robo_varredura(capsys):
     captured = capsys.readouterr()
     assert "Varredura das câmeras concluída. Status atualizado para todas as salas." in captured.out
 
+# Fim do arquivo tests.test_sistema_seguranca.py

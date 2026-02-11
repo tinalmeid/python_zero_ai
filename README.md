@@ -183,7 +183,8 @@ python_zero_a_ai/
 │   ├── leitura_arquivos.ipynb              # 📜 Pandas vs Python Puro
 │   ├── limpeza_dados.ipynb                 # 🏠 Tratamento de dados imobiliários
 │   ├── analise_fifa.ipynb                  # ⚽ EDA com dados de Futebol
-│   └── visualizacao.ipynb                  # 🎨 Gráficos e Dashboards
+│   ├── visualizacao_basica.ipynb           # 🎨 Gráficos e Dashboards básico
+│   └── visualizacao_avancada.ipynb         # 🎨 Gráficos e Dashboards avançado
 ├── src/                                    # 🧠 Código Fonte (Módulos do Curso)
 │   ├── __init__.py
 │   ├── setup_inicial/                      # 🏗️ Módulo 01: Setup e Boas Práticas
@@ -258,8 +259,8 @@ Monitoramento de tarefas de desenvolvimento com base no fluxo de trabalho de Eng
 | **CDD-17** | 🧮 Desafios: Calculadora Math Avançada | `CDD-17-feat/calculadora-funcoes-avancadas` | ✅ Concluído |
 | **CDD-18** | 🐼 Data Science: Leitura (Pandas vs Python) | `CDD-18-feat/leitura-arquivos-pandas` | ✅ Concluído |
 | **CDD-19** | 🧹 Data Science: Limpeza e Manipulação (Real Estate) | `CDD-19-feat/limpeza-tratamento-dados` | ✅ Concluído |
-| **CDD-20** | ⚡ Data Science: Performance NumPy (Arrays & Memória) | `CDD-19-feat/numpy-performance` | 📅 Planejado |
-| **CDD-21** | 📊 Data Viz I: Gráficos Fundamentais | `CDD-21-feat/visualizacao-basica` | 📅 Planejado |
+| **CDD-20** | ⚡ Data Science: Performance NumPy (Arrays & Memória) | `CDD-19-feat/numpy-performance` | ✅ Concluído |
+| **CDD-21** | 📊 Data Viz I: Gráficos Fundamentais | `CDD-21-feat/visualizacao-basica` | ✅ Concluído |
 | **CDD-22** | 🎨 Data Viz II: Estatística e Estilização | `CDD-22-feat/visualizacao-avancada` | 📅 Planejado |
 
 > **Legenda:** ✅ Concluído | 🚧 Em Andamento | 📅 Planejado

@@ -261,7 +261,7 @@ Monitoramento de tarefas de desenvolvimento com base no fluxo de trabalho de Eng
 | **CDD-19** | 🧹 Data Science: Limpeza e Manipulação (Real Estate) | `CDD-19-feat/limpeza-tratamento-dados` | ✅ Concluído |
 | **CDD-20** | ⚡ Data Science: Performance NumPy (Arrays & Memória) | `CDD-19-feat/numpy-performance` | ✅ Concluído |
 | **CDD-21** | 📊 Data Viz I: Gráficos Fundamentais | `CDD-21-feat/visualizacao-basica` | ✅ Concluído |
-| **CDD-22** | 🎨 Data Viz II: Estatística e Estilização | `CDD-22-feat/visualizacao-avancada` | 📅 Planejado |
+| **CDD-22** | 🎨 Data Viz II: Estatística e Estilização | `CDD-22-feat/visualizacao-avancada` | ✅ Concluído |
 
 > **Legenda:** ✅ Concluído | 🚧 Em Andamento | 📅 Planejado
 
